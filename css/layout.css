@@ -1,0 +1,76 @@
+main{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    height: auto;
+}
+footer{
+    width: 100%;
+    height: auto;
+}
+#sectionHeader{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+}
+#articleHeaderLogo{
+    width: 25%;
+    height: auto;
+}
+#articleHeaderTitle{
+    width: 50%;
+    height: auto;
+    margin-top: 30px;
+}
+#sectionMeio{
+    width: 100%;
+    height: auto;
+}
+#articleBanner{
+    width: 100%;
+    height: auto;
+    
+}
+#articleInput{
+    width: 100%;
+    height: auto;
+    margin-top: 7%;
+    display: block;
+}
+#divLabel{
+    width: 100%;
+    height: auto;
+}
+#sectionFooter{
+    width: 100%;
+    height: auto;
+}
+#articleSignin{
+    width: 100%;
+    height: auto;
+    padding-top: 8%;
+}
+#articleTitulo{
+    width: 100%;
+    height: auto;
+    padding-top: 4%
+}
+@media all and (max-width: 655px){
+    #articleHeaderTitle{
+        display: none;
+    }
+    #articleHeaderLogo{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+}
+@media all and (max-width: 928px){
+    #articleHeaderLogo{
+        padding-top: 2%;
+    }
+}
