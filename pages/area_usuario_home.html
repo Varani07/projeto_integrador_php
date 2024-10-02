@@ -8,26 +8,69 @@
         <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
         <link rel="stylesheet" type="text/css" href="../css/style.css"/>
         <link rel="stylesheet" type="text/css" href="../css/form.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
     </head>
     <body>
-        <main>
+        <main class="corpo">
             <header>
                 <section id="sectionHeader">
                     <article id="articleHeaderLogo">
                         <a href="../index.html"><img class="imgLogo" src="../img/senac_logo_new.png" alt="senac_logo" title="Senac Logo" /></a>
                     </article>
                     <article id="articleHeaderTitle">
-                        <h1 class="h1">Sistema Pedagógico Senac Tech</h1>
+                        <h1 class="h1">Área do Usuário</h1>
                     </article>
                 </section>
             </header>
             <hr id="hr1" />
+            <input type="checkbox" id="bt_menu" />
+            <label for="bt_menu">&#9776;</label>
+            <nav id="menu">
+                <ul>
+                <li>
+                    <a>Cadastrar</a>
+                    <ul>
+                    <li>
+                        <a href="">Curso</a>
+                    </li>
+                    <li>
+                        <a href="">Módulo</a>
+                    </li>
+                    <li>
+                        <a href="">Unidade Curricular</a>
+                    </li>
+                    <li>
+                        <a href="">Turma</a>
+                    </li>
+                    <li>
+                        <a href="">Aluno</a>
+                    </li>
+                    <li>
+                        <a href="">Professor</a>
+                    </li>
+                    <li>
+                        <a href="">Cronograma</a>
+                    </li>
+                    <li>
+                        <a href="">Professor em UC</a>
+                    </li>
+                    <li>
+                        <a href="">Aluno em Turma</a>
+                    </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Cronogramas</a>
+                </li>
+                <li>
+                    <a href="">Alterar</a>
+                </li>
+                </ul>
+            </nav>
+            <hr id="hr2" />
             <section id="sectionMeio">
-                <article id="articleBanner">
-                    <img class="imgBanner" src="../img/Senac.jpg" alt="banner" title="Banner" /> 
-                </article>
                 <article id="articleTitulo">
-                    <h2 class="h2Titulo">Sign In</h2>
+                    <h2 class="h2Titulo" id="nomeUsuario">Nome do Usuário*</h2>
                 </article>
                 <article id="articleInput">
                     <div id="divLabel">

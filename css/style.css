@@ -52,6 +52,12 @@ a{
     text-decoration: none;
     color: black;
 }
+.reqSenha{
+    font-family: arial;
+}
+#nomeUsuario{
+    color: red;
+}
 @media all and (max-width: 430px){
     .pLeft{
         padding-left: 3%;

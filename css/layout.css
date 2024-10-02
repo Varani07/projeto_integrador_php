@@ -3,6 +3,12 @@ main{
     height: auto;
     margin: 0 auto;
 }
+.corpo{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
 header{
     width: 100%;
     height: auto;
@@ -72,5 +78,10 @@ footer{
 @media all and (max-width: 928px){
     #articleHeaderLogo{
         padding-top: 2%;
+    }
+}
+@media all and (max-width: 430px){
+    .reqSenha{
+        font-size: 12px;
     }
 }
