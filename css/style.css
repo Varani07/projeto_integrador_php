@@ -39,6 +39,9 @@
 .pCenter{
     text-align: center;
 }
+#btns{
+    margin-right: 20px;
+}
 .pLeft{
     padding-left: 3%;
     font-size: 24px;
@@ -62,5 +65,10 @@ a{
     .pLeft{
         padding-left: 3%;
         font-size: 14px;
+    }
+}
+@media all and (max-width: 445px){
+    #btns{
+        margin-bottom: 20px;
     }
 }

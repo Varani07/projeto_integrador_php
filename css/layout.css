@@ -39,7 +39,6 @@ footer{
 #articleBanner{
     width: 100%;
     height: auto;
-    
 }
 #articleInput{
     width: 100%;
@@ -64,6 +63,15 @@ footer{
     width: 100%;
     height: auto;
     padding-top: 4%
+}
+#articleButtonFlex{
+    display: flex;
+    justify-content: center;
+}
+@media all and (max-width: 445px){
+    #articleButtonFlex{
+        display: block;
+    }
 }
 @media all and (max-width: 655px){
     #articleHeaderTitle{

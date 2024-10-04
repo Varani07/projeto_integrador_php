@@ -1,0 +1,29 @@
+
+(DOC001) Documentação - Alterar Para Web
+(BANCO001) Banco de dados - Verificar
+(HTML/CSS001) Login - Pronto
+(HTML/CSS002) Sign In - Pronto
+(HTML/CSS003) Área Adm
+(HTML/CSS004) Área Adm / Usuários
+(HTML/CSS005) Área Adm / Administradores
+(HTML/CSS006) Área Adm / Cad. Adm.
+(HTML/CSS007) Área Adm / Log
+(HTML/CSS008) Área Usuário - Pronto
+(HTML/CSS009) Área Usuário / Cadastrar Curso      
+(HTML/CSS010) Área Usuário / Cadastrar Módulo
+(HTML/CSS011) Área Usuário / Cadastrar UC
+(HTML/CSS012) Área Usuário / Cad. Prof. UC
+(HTML/CSS013) Área Usuário / Cadastrar Turma
+(HTML/CSS014) Área Usuário / Cad. Aluno Turma
+(HTML/CSS015) Área Usuário / Cadastrar Aluno
+(HTML/CSS016) Área Usuário / Cadastrar Professor
+(HTML/CSS017) Área Usuário / Cadastrar Cronograma
+(HTML/CSS018) Área Usuário / Cronogramas
+(HTML/CSS019) Área Usuário / Alterar Aluno
+(HTML/CSS020) Área Usuário / Alterar Curso
+(HTML/CSS021) Área Usuário / Alterar Módulo
+(HTML/CSS022) Área Usuário / Alterar Professor
+(HTML/CSS023) Área Usuário / Alterar Turma
+(HTML/CSS024) Área Usuário / Alterar UC
+
+páginas prontas - 3/24

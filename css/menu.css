@@ -86,10 +86,10 @@ label[for="bt_menu"]{
         position: static;
         overflow: hidden;
         max-height: 0;
-        transition: all 1.5s;
+        transition: all 1s;
     }
     #menu ul li:hover ul{
         height: auto;
-        max-height: 200px;
+        max-height: 900px;
     }
 }

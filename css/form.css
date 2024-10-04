@@ -40,6 +40,16 @@ select, .dados input[type="checkbox"]{
     background-color: rgb(248, 232, 3);
     box-shadow: 8px 8px 8px rgb(0, 56, 56);
 }
+#btnAlterarDados{
+    color: rgb(2, 0, 0);
+    background-color: rgb(248, 150, 3);
+    box-shadow: 8px 8px 8px rgb(0, 56, 56);
+}
+#btnDeletarConta{
+    color: rgb(2, 0, 0);
+    background-color: rgb(231, 18, 18);
+    box-shadow: 8px 8px 8px rgb(0, 56, 56);
+}
 @media all and (max-width: 500px){
     .dados input[type="text"], .dados input[type="password"], .dados select{
         padding: 3px;

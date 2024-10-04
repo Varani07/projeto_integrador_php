@@ -15,7 +15,7 @@
             <header>
                 <section id="sectionHeader">
                     <article id="articleHeaderLogo">
-                        <a href="../index.html"><img class="imgLogo" src="../img/senac_logo_new.png" alt="senac_logo" title="Senac Logo" /></a>
+                        <a href="./area_usuario_home.html"><img class="imgLogo" src="../img/senac_logo_new.png" alt="senac_logo" title="Senac Logo" /></a>
                     </article>
                     <article id="articleHeaderTitle">
                         <h1 class="h1">Área do Usuário</h1>
@@ -27,11 +27,14 @@
             <label for="bt_menu">&#9776;</label>
             <nav id="menu">
                 <ul>
+                    <li>
+                        <a href="./area_usuario_home.html">Início</a>
+                    </li>
                 <li>
                     <a>Cadastrar</a>
                     <ul>
                         <li>
-                            <a href="">Curso</a>
+                            <a href="./cadastrar_curso.html">Curso</a>
                         </li>
                         <li>
                             <a href="./cadastrar_modulo.html">Módulo</a>
@@ -63,7 +66,7 @@
                     <a href="./cronogramas.html">Cronogramas</a>
                 </li>
                 <li>
-                    <a href="">Alterar</a>
+                    <a>Alterar</a>
                     <ul>
                         <li>
                             <a href="./alterar_curso.html">Curso</a>
@@ -85,15 +88,60 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="../index.html">Sair</a>
+                </li>
                 </ul>
             </nav>
             <hr id="hr2" />
             <section id="sectionMeio">
                 <article id="articleTitulo">
-                    <h2 class="h2Titulo" id="nomeUsuario">Nome do Usuário*</h2>
+                    <h2 class="h2Titulo" id="nomeUsuario">Informações Pessoais</h2>
                 </article>
-                <article id="articleInfoNav">
-                    <p>Preencher com containers com imagens para cadastro, cronograma e alterar</p>
+                <article id="articleInput">
+                    <div id="divLabel">
+                        <form action="#" method="post">
+                            <fieldset id="fieldsetLabel">
+                                <fieldset id="bloco">
+                                    <div class="dados">
+                                        <label>Usuário:</label>
+                                        <input type="text" name="username" maxlength="40" required />
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco">
+                                    <div class="dados">
+                                        <label>CPF:</label>
+                                        <input type="text" name="cpf" maxlength="14" required />
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco">
+                                    <div class="dados">
+                                        <label>E-mail:</label>
+                                        <input type="text" name="email" maxlength="50" required />
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco">
+                                    <div class="dados">
+                                        <label>Senha:</label>
+                                        <p class="reqSenha">Mínimo 6 caracteres (3 letras, 2 números e 1 caracter especial)</p>
+                                        <input type="password" name="password" maxlength="60" required />
+                                        <input type="checkbox" name="ver_senha" />
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco">
+                                    <div class="dados">
+                                        <label>Confirme sua senha:</label>
+                                        <input type="password" name="confirm_password" maxlength="60" required />
+                                        <input type="checkbox" name="ver_senhaC" />
+                                    </div>
+                                </fieldset>
+                            </fieldset>
+                        </form>
+                    </div>
+                </article>
+                <article id="articleButtonFlex">
+                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados">Alterar Dados</button></p>
+                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnDeletarConta">Deletar Conta</button></p>
                 </article>
             </section>
             <hr id="hr1" />
@@ -104,3 +152,4 @@
             </footer>
         </main>
     </body>
+</html>
