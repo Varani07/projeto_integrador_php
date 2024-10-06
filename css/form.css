@@ -1,7 +1,7 @@
 #fieldsetLabel{
     text-align: center;
 }
-.dados input[type="text"], .dados input[type="password"], .dados select{
+.dados input[type="text"], .dados input[type="password"], .dados input[type="number"], .dados select{
     padding: 3px;
     border: 1px solid #CCC;
     box-shadow: 10px 10px 8px #888;
@@ -51,7 +51,7 @@ select, .dados input[type="checkbox"]{
     box-shadow: 8px 8px 8px rgb(0, 56, 56);
 }
 @media all and (max-width: 500px){
-    .dados input[type="text"], .dados input[type="password"], .dados select{
+    .dados input[type="text"], .dados input[type="password"], .dados input[type="number"], .dados select{
         padding: 3px;
         border: 1px solid #CCC;
         box-shadow: 10px 10px 8px #888;

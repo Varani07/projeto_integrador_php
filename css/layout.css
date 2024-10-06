@@ -67,6 +67,10 @@ footer{
 #articleButtonFlex{
     display: flex;
     justify-content: center;
+    margin-bottom: 400px;
+}
+#articleButton{
+    margin-bottom: 400px;
 }
 @media all and (max-width: 445px){
     #articleButtonFlex{

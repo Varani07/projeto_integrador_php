@@ -1,6 +1,6 @@
 
 (DOC001) Documentação - Alterar Para Web
-(BANCO001) Banco de dados - Verificar
+(BANCO001) Banco de dados - Pronto
 (HTML/CSS001) Login - Pronto
 (HTML/CSS002) Sign In - Pronto
 (HTML/CSS003) Área Adm
@@ -9,12 +9,12 @@
 (HTML/CSS006) Área Adm / Cad. Adm.
 (HTML/CSS007) Área Adm / Log
 (HTML/CSS008) Área Usuário - Pronto
-(HTML/CSS009) Área Usuário / Cadastrar Curso      
-(HTML/CSS010) Área Usuário / Cadastrar Módulo
-(HTML/CSS011) Área Usuário / Cadastrar UC
-(HTML/CSS012) Área Usuário / Cad. Prof. UC
-(HTML/CSS013) Área Usuário / Cadastrar Turma
-(HTML/CSS014) Área Usuário / Cad. Aluno Turma
+(HTML/CSS009) Área Usuário / Cadastrar Curso - Pronto 
+(HTML/CSS010) Área Usuário / Cadastrar Módulo - Pronto
+(HTML/CSS011) Área Usuário / Cadastrar UC - Pronto
+(HTML/CSS012) Área Usuário / Cad. Prof. UC - Pronto
+(HTML/CSS013) Área Usuário / Cadastrar Turma - Pronto
+(HTML/CSS014) Área Usuário / Cad. Aluno Turma - Pronto
 (HTML/CSS015) Área Usuário / Cadastrar Aluno
 (HTML/CSS016) Área Usuário / Cadastrar Professor
 (HTML/CSS017) Área Usuário / Cadastrar Cronograma
@@ -27,3 +27,45 @@
 (HTML/CSS024) Área Usuário / Alterar UC
 
 páginas prontas - 3/24
+
+USER
+username varchar(40)
+password varchar(60)
+email varchar(50)
+cpf varchar(14)
+
+ALUNO
+nome_aluno varchar(50)
+sobrenome_aluno varchar(50)
+nome_pai-aluno varchar(100)
+nome_mae_aluno varchar(100)
+celular_aluno varchar(11)
+email_aluno varchar(50)
+data_nascimento_aluno varchar(10)
+cpf_aluno varchar(14)
+sexo_aluno char(1)
+grau_de_instrucao varchar(50)
+etnia varchar(25)
+endereco_aluno varchar(60)
+numero_aluno int(6)
+bairro_aluno varchar(35)
+cidade_aluno varchar(50)
+estado_aluno char(2)
+estado_civil_aluno varchar(20)
+religiao_aluno varchar(50)
+res_fin_aluno bool
+res_leg_aluno bool
+trabalho_aluno bool
+curso int foreign_key
+
+
+CURSO
+nome_curso varchar(40)
+sigla varchar(6)
+carga_horaria int(4)
+
+UC
+nome_uc varchar(60)
+
+MODULO
+nome_modulo varchar(75)
