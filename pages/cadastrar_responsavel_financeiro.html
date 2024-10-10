@@ -96,7 +96,7 @@
             <hr id="hr2" />
             <section id="sectionMeio">
                 <article id="articleTitulo">
-                    <h2 class="h2Titulo">Escolha um Curso e um Módulo para criar</h2>
+                    <h2 class="h2Titulo">Cadastrar Responsável Financeiro</h2>
                 </article>
                 <article id="articleInput">
                     <div id="divLabel">
@@ -104,21 +104,26 @@
                             <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>Curso:</label>
-                                        <select name="nome_curso">
-                                            <option value="curso1" selected>Preencher com Cursos Cadastrados</option>
-                                        </select>
+                                        <label>Nome:</label>
+                                        <input type="text" name="nome_res_fin" maxlength="50" required/>
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>Módulo:</label>
-                                        <select name="modulo">
-                                            <option value="modulo_A" selected>Módulo A</option>
-                                            <option value="modulo_B">Módulo B</option>
-                                            <option value="modulo_C">Módulo C</option>
-                                            <option value="modulo_D">Módulo D</option>
-                                        </select>
+                                        <label>Sobrenome:</label>
+                                        <input type="text" name="sobrenome_res_fin" maxlength="50" required/>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco">
+                                    <div class="dados">
+                                        <label>Data de nascimento:</label>
+                                        <input type="date" name="data_nascimento_res_fin" maxlength="10" required/>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco">
+                                    <div class="dados">
+                                        <label>CPF:</label>
+                                        <input type="text" name="cpf_res_fin" maxlength="14" required/>
                                     </div>
                                 </fieldset>
                             </fieldset>
@@ -126,7 +131,7 @@
                     </div>
                 </article>
                 <article id="articleButton">
-                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnLogin" name="btnCadastrar_Modulo">Cadastrar</button></p>
+                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnLogin" name="btnCadastrar_Responsavel_Financeiro">Cadastrar</button></p>
                 </article>
             </section>
             <hr id="hr1" />

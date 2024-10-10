@@ -1,7 +1,11 @@
 #fieldsetLabel{
     text-align: center;
 }
-.dados input[type="text"], .dados input[type="password"], .dados input[type="number"], .dados select{
+#bloco2{
+    margin-bottom: 30px;
+}
+.dados input[type="text"], .dados input[type="password"], .dados input[type="number"], .dados input[type="email"]
+, .dados input[type="date"], .dados select{
     padding: 3px;
     border: 1px solid #CCC;
     box-shadow: 10px 10px 8px #888;
@@ -11,6 +15,12 @@
     font-size: 16px;
     margin-bottom: 3%;
 }
+.dados #divRadioGenero input[type="radio"]{
+    margin-left: 85%;
+}
+.dados #divRadioGenero input[type="checkbox"]{
+    margin-left: 85%;
+}
 .dados input[type="checkbox"]{
     appearance: "textfield";
 }
@@ -18,7 +28,8 @@
     background-color: rgb(221, 218, 218);
     outline: none;
 }
-select, .dados input[type="checkbox"]{
+select, .dados input[type="checkbox"], .dados input[type="date"]
+, .dados input[type="radio"]{
     cursor: pointer;
 }
 .botao{
@@ -28,6 +39,7 @@ select, .dados input[type="checkbox"]{
     margin-bottom: 1%;
     border-radius: 8px;
     padding: 1% 1%;
+    margin-top: 30px;
     /*text-shadow: 3px 3px 3px rgba(0, 191, 255);*/
 }
 #btnLogin{
@@ -51,7 +63,7 @@ select, .dados input[type="checkbox"]{
     box-shadow: 8px 8px 8px rgb(0, 56, 56);
 }
 @media all and (max-width: 500px){
-    .dados input[type="text"], .dados input[type="password"], .dados input[type="number"], .dados select{
+    .dados input[type="text"], .dados input[type="password"], .dados input[type="number"], .dados input[type="email"], .dados input[type="date"], .dados select{
         padding: 3px;
         border: 1px solid #CCC;
         box-shadow: 10px 10px 8px #888;
