@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css"/>
         <link rel="stylesheet" type="text/css" href="../css/form.css"/>
         <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/tables.css"/>
     </head>
     <body>
         <main class="corpo">
@@ -102,137 +103,115 @@
                     <div id="divLabel">
                         <form action="#" method="post">
                             <fieldset id="fieldsetLabel">
-                                <fieldset id="bloco2">
-                                    <div class="dados">
-                                        <label id="labelGenero">Gênero:</label>
-                                        <div id="divGenero"> 
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="M" checked />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Masculino</label>
-                                            </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="F" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Feminino</label>
-                                            </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="O" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Outro</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <fieldset id="bloco2">
-                                    <div class="dados">
-                                        <label id="labelGenero">Gênero:</label>
-                                        <div id="divGenero"> 
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="M" checked />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Masculino</label>
-                                            </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="F" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Feminino</label>
-                                            </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="O" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Outro</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <article id="articleButton">
-                                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnLogin" name="btnCadastrar_Aluno">Cadastrar</button></p>
-                                </article>
-                                <fieldset id="bloco2">
-                                    <div class="dados">
-                                        <label id="labelGenero">Gênero:</label>
-                                        <div id="divGenero"> 
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="M" checked />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Masculino</label>
-                                            </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="F" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Feminino</label>
-                                            </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="O" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Outro</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <fieldset id="bloco2">
-                                    <div class="dados">
-                                        <label id="labelGenero">Gênero:</label>
-                                        <div id="divGenero"> 
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="M" checked />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Masculino</label>
-                                            </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="F" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Feminino</label>
-                                            </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="O" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Outro</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <article id="articleButton">
-                                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnLogin" name="btnCadastrar_Aluno">Cadastrar</button></p>
-                                </article>
-                                <p>tabela</p>
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>Clique na tabela para preenche-lá com os professores que aparecerem na caixinha abaixo</label>
-                                        <input type="text" name="nome_pai_aluno" maxlength="100" required/>
+                                        <label>Data de Início</label>
+                                        <input type="date" name="data_escolhida" value="" required/>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco">
+                                    <div class="dados">
+                                        <label>Até</label>
+                                        <label id="labelExplicacao">(campo preenchido automáticamente ao escolher Unidade Currícular)</label>
+                                        <input type="text" name="data_escolhida" value="" disabled/>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco">
+                                    <div class="dados">
+                                        <label>Curso</label>
+                                        <select name="curso_escolhido">
+                                            <option value="curso1" selected>Preencher com os cursos disponíveis</option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco">
+                                    <div class="dados">
+                                        <label>Turma</label>
+                                        <select name="turma_escolhida">
+                                            <option value="turma1" selected>Preencher com as turmas disponíveis</option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco2">
+                                    <div class="dados">
+                                        <label id="labelGenero">Módulo</label>
+                                        <div id="divGenero"> 
+                                            <div id="divRadioGenero">
+                                                <input type="radio" name="modulo_a" value="a" checked />
+                                            </div>
+                                            <div id="divLabelGenero">
+                                                <label id="genero">A</label>
+                                            </div>
+                                        </div>
+                                        <div id="divGenero">
+                                            <div id="divRadioGenero">
+                                                <input type="radio" name="modulo_b" value="b" />
+                                            </div>
+                                            <div id="divLabelGenero">
+                                                <label id="genero">B</label>
+                                            </div>
+                                        </div>
+                                        <div id="divGenero">
+                                            <div id="divRadioGenero">
+                                                <input type="radio" name="modulo_c" value="c" />
+                                            </div>
+                                            <div id="divLabelGenero">
+                                                <label id="genero">C</label>
+                                            </div>
+                                        </div>
+                                        <div id="divGenero">
+                                            <div id="divRadioGenero">
+                                                <input type="radio" name="modulo_d" value="d" />
+                                            </div>
+                                            <div id="divLabelGenero">
+                                                <label id="genero">D</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco2">
+                                    <div class="dados_table">
+                                        <table>
+                                            <caption>
+                                                Cronogramas Cadastrados
+                                            </caption>
+                                            <tr>
+                                                <th>UC</th>
+                                                <th>Professor</th>
+                                                <th>Data Início</th>
+                                                <th>Data Fim</th>
+                                            </tr>
+                                            <tr>
+                                                <td data-cell="uc">unidade curricular 1</td>
+                                                <td data-cell="prof">professor 1</td>
+                                                <td data-cell="data_inicio">07/07/2023</td>
+                                                <td data-cell="data_fim">07/12/2023</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-cell="uc">unidade curricular 2</td>
+                                                <td data-cell="prof">professor 2</td>
+                                                <td data-cell="data_inicio">07/07/2023</td>
+                                                <td data-cell="data_fim">07/12/2023</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-cell="uc">unidade curricular 3</td>
+                                                <td data-cell="prof">professor 3</td>
+                                                <td data-cell="data_inicio">07/07/2023</td>
+                                                <td data-cell="data_fim">07/12/2023</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco">
+                                    <div class="dados">
+                                        <label id="labelExplicacao">Clique na tabela para preenche-lá com os professores que aparecerem na caixinha abaixo</label>
+                                        <select name="professor_escolhido">
+                                            <option value="professor1" selected>Preencher com os professores disponíveis</option>
+                                        </select>
                                     </div>
                                 </fieldset>
                                 <article id="articleButton">
-                                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnLogin" name="btnCadastrar_Aluno">Cadastrar</button></p>
+                                    <p class="pCenter" id="btns"><button type="submit" class="botao2" id="btnEscolherProfessor" name="btnEscolherProfessor">Escolher Professor</button></p>
                                 </article>
                             </fieldset>
                         </form>

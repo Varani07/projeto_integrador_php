@@ -1,0 +1,111 @@
+.dados_table{
+    width: min(900px, 100% - 3rem);
+    margin-inline: auto;
+}
+
+table{
+    width: 100%;
+    background-color: #323232;
+    color: aliceblue;
+    border-collapse: collapse;
+}
+
+caption{
+    color: black;
+    background-color: azure;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+th{
+    background: hsl(0 0% 0% / 0.5);
+}
+
+tr:nth-of-type(2n){
+    background: hsl(0 0% 0% / 0.15);
+}
+
+@media (max-width: 500px){
+    th{
+        display: none;
+    }
+    td{
+        display: block;
+    }
+}
+
+
+
+
+
+/*
+table{
+    border: 1px solid black;
+    color: white;
+    width: 80%;
+    margin: auto;
+}
+th, td{
+    border: 1px solid rgb(255, 200, 0);
+    padding: 10px;
+}
+tr{
+    background-color: #120b0b;
+}
+td{
+    min-width: 100px;
+}
+thead {
+    background-color: #0a160a;
+    color: white;
+}
+.dados_table{
+    width: 100%;
+}
+@media all and (max-width: 535px){
+    th, td{
+        font-size: 12px;
+    }
+}
+
+<thead>
+<tr>
+    <th scope="col">#</th>
+    <th scope="col">UC</th>
+    <th scope="col">Professor</th>
+    <th scope="col">Data Início</th>
+    <th scope="col">Data Final</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <th scope="row">1</th>
+    <td>unidade curricular 1</td>
+    <td>professor 1</td>
+    <td>07/07/2024</td>
+    <td>07/12/2024</td>
+</tr>
+<tr>
+    <th scope="row">2</th>
+    <td>unidade curricular 2</td>
+    <td>professor 2</td>
+    <td>07/07/2024</td>
+    <td>07/12/2024</td>
+</tr>
+<tr>
+    <th scope="row">3</th>
+    <td>unidade curricular 3</td>
+    <td>professor 3</td>
+    <td>07/07/2024</td>
+    <td>07/12/2024</td>
+</tr>
+<tr>
+    <th scope="row">4</th>
+    <td>unidade curricular 4</td>
+    <td>professor 4</td>
+    <td>07/07/2024</td>
+    <td>07/12/2024</td>
+</tr>
+</tbody>
+*/

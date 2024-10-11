@@ -42,6 +42,15 @@ select, .dados input[type="checkbox"], .dados input[type="date"]
     margin-top: 30px;
     /*text-shadow: 3px 3px 3px rgba(0, 191, 255);*/
 }
+.botao2{
+    font-size: 24px;
+    width: 250px;
+    border: 0;
+    margin-bottom: 1%;
+    border-radius: 8px;
+    padding: 1% 1%;
+    margin-top: 30px;
+}
 #btnLogin{
     color: rgb(2, 0, 0);
     background-color: rgb(1, 226, 31);
@@ -62,6 +71,12 @@ select, .dados input[type="checkbox"], .dados input[type="date"]
     background-color: rgb(231, 18, 18);
     box-shadow: 8px 8px 8px rgb(0, 56, 56);
 }
+#btnEscolherProfessor{
+    color: rgb(2, 0, 0);
+    background-color: rgb(255, 204, 0);
+    box-shadow: 8px 8px 8px rgb(0, 60, 60);
+}
+
 @media all and (max-width: 500px){
     .dados input[type="text"], .dados input[type="password"], .dados input[type="number"], .dados input[type="email"], .dados input[type="date"], .dados select{
         padding: 3px;
@@ -77,5 +92,16 @@ select, .dados input[type="checkbox"], .dados input[type="date"]
 @media all and (max-width: 460px){
     #bloco{
         margin-bottom: 7%;
+    }
+}
+@media all and (max-width: 290px){
+    .botao2{
+        font-size: 16px;
+        width: 150px;
+        border: 0;
+        margin-bottom: 1%;
+        border-radius: 8px;
+        padding: 1% 1%;
+        margin-top: 30px;
     }
 }

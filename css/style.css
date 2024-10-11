@@ -61,6 +61,10 @@ a{
 #nomeUsuario{
     color: red;
 }
+#labelExplicacao{
+    font-size: 12px;
+}
+
 @media all and (max-width: 430px){
     .pLeft{
         padding-left: 3%;
