@@ -17,7 +17,7 @@
 (HTML/CSS014) Área Usuário / Cad. Aluno Turma - Pronto
 (HTML/CSS015) Área Usuário / Cadastrar Aluno - Pronto
 (HTML/CSS016) Área Usuário / Cadastrar Professor - Pronto
-(HTML/CSS017) Área Usuário / Cadastrar Cronograma
+(HTML/CSS017) Área Usuário / Cadastrar Cronograma - Pronto
 (HTML/CSS018) Área Usuário / Cronogramas
 (HTML/CSS019) Área Usuário / Alterar Aluno
 (HTML/CSS020) Área Usuário / Alterar Curso

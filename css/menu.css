@@ -86,7 +86,7 @@ label[for="bt_menu"]{
         position: static;
         overflow: hidden;
         max-height: 0;
-        transition: all 1s;
+        transition: all 4s;
     }
     #menu ul li:hover ul{
         height: auto;

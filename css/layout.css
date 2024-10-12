@@ -72,6 +72,12 @@ footer{
 #articleButton{
     margin-bottom: 400px;
 }
+#articleButtonCadCurso{
+    margin-bottom: 730px;
+}
+#articleButtonCadCronograma{
+    margin-bottom: 100px;
+}
 #divGenero{
     width: 100%;
     display: flex;

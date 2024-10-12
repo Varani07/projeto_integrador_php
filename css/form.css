@@ -51,29 +51,34 @@ select, .dados input[type="checkbox"], .dados input[type="date"]
     padding: 1% 1%;
     margin-top: 30px;
 }
-#btnLogin{
-    color: rgb(2, 0, 0);
-    background-color: rgb(1, 226, 31);
+#btnLogin{ 
+    color: rgb(1, 226, 31);
+    background-color: rgb(2, 0, 0);
     box-shadow: 8px 8px 8px rgb(0, 56, 56);
 }
 #btnSignin{
-    color: rgb(2, 0, 0);
-    background-color: rgb(248, 232, 3);
+    color: rgb(248, 232, 3);
+    background-color: rgb(2, 0, 0);
     box-shadow: 8px 8px 8px rgb(0, 56, 56);
 }
 #btnAlterarDados{
-    color: rgb(2, 0, 0);
-    background-color: rgb(248, 150, 3);
+    color: rgb(248, 150, 3);
+    background-color: rgb(2, 0, 0);
     box-shadow: 8px 8px 8px rgb(0, 56, 56);
 }
 #btnDeletarConta{
-    color: rgb(2, 0, 0);
-    background-color: rgb(231, 18, 18);
-    box-shadow: 8px 8px 8px rgb(0, 56, 56);
+    color: rgb(231, 18, 18);
+    background-color: rgb(2, 0, 0);
+    box-shadow: 8px 8px 8px rgb(0, 60, 60);
 }
 #btnEscolherProfessor{
-    color: rgb(2, 0, 0);
-    background-color: rgb(255, 204, 0);
+    color: rgb(255, 204, 0);
+    background-color: rgb(2, 0, 0);
+    box-shadow: 8px 8px 8px rgb(0, 60, 60);
+}
+#btnBuscar{
+    color: rgb(255, 204, 0);
+    background-color: rgb(2, 0, 0);
     box-shadow: 8px 8px 8px rgb(0, 60, 60);
 }
 
