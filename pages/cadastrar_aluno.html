@@ -150,31 +150,33 @@
                                         <input type="text" name="cpf_aluno" maxlength="14" required/>
                                     </div>
                                 </fieldset>
-                                <fieldset id="bloco">
+                                <fieldset id="bloco2">
                                     <div class="dados">
-                                        <label id="labelGenero">Gênero:</label>
-                                        <div id="divGenero"> 
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="M" checked />
+                                        <div id="same_line">
+                                            <label id="labelGenero">Gênero:</label>
+                                            <div id="divGenero"> 
+                                                <div id="divRadioGenero">
+                                                    <input type="radio" name="sexo_aluno" value="M" checked />
+                                                </div>
+                                                <div id="divLabelGenero">
+                                                    <label id="genero">Masculino</label>
+                                                </div>
                                             </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Masculino</label>
+                                            <div id="divGenero">
+                                                <div id="divRadioGenero">
+                                                    <input type="radio" name="sexo_aluno" value="F" />
+                                                </div>
+                                                <div id="divLabelGenero">
+                                                    <label id="genero">Feminino</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="F" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Feminino</label>
-                                            </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_aluno" value="O" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Outro</label>
+                                            <div id="divGenero">
+                                                <div id="divRadioGenero">
+                                                    <input type="radio" name="sexo_aluno" value="O" />
+                                                </div>
+                                                <div id="divLabelGenero">
+                                                    <label id="genero">Outro</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -241,44 +243,48 @@
                                         <input type="text" name="religiao_aluno" maxlength="50" required/>
                                     </div>
                                 </fieldset>
-                                <fieldset id="bloco">
+                                <fieldset id="bloco2">
                                     <div class="dados">
-                                        <label id="labelGenero">Responsáveis</label>
-                                        <div id="divGenero"> 
-                                            <div id="divRadioGenero">
-                                                <input type="checkbox" name="res_fin_aluno" value="" />
+                                        <div id="same_line">
+                                            <label id="labelGenero">Responsáveis</label>    
+                                            <div id="divResponsaveis">
+                                                <div id="divCheckboxResponsaveis">
+                                                    <input type="checkbox" name="res_leg_aluno" value="" />
+                                                </div>
+                                                <div id="divLabelGenero">
+                                                    <label id="genero">Responsável Legal</label>
+                                                </div>
                                             </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Responsável Financeiro</label>
-                                            </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="checkbox" name="res_leg_aluno" value="" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Responsável Legal</label>
+                                            <div id="divResponsaveis"> 
+                                                <div id="divCheckboxResponsaveis">
+                                                    <input type="checkbox" name="res_fin_aluno" value="" />
+                                                </div>
+                                                <div id="divLabelGenero">
+                                                    <label id="genero">Responsável Financeiro</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </fieldset>
-                                <fieldset id="bloco">
+                                <fieldset id="bloco2">
                                     <div class="dados">
-                                        <label id="labelGenero">Trabalha?</label>
-                                        <div id="divGenero"> 
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="trabalho_aluno" value="True" checked />
+                                        <div id="same_line">
+                                            <label id="labelGenero">Trabalha?</label>
+                                            <div id="divTrabalha"> 
+                                                <div id="divRadioTrabalha">
+                                                    <input type="radio" name="trabalho_aluno" value="True" checked />
+                                                </div>
+                                                <div id="divLabelGenero">
+                                                    <label id="genero">Sim</label>
+                                                </div>
                                             </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Sim</label>
-                                            </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="trabalho_aluno" value="False" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Não</label>
+                                            <div id="divTrabalha">
+                                                <div id="divRadioTrabalha">
+                                                    <input type="radio" name="trabalho_aluno" value="False" />
+                                                </div>
+                                                <div id="divLabelGenero">
+                                                    <label id="genero">Não</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
