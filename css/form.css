@@ -1,8 +1,29 @@
 #fieldsetLabel{
     text-align: center;
 }
-#bloco2{
-    margin-bottom: 30px;
+/* #same_line{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-style: outset;
+    border-width: 4px;
+    border-radius: 15px;
+    width: 50%;
+    padding-bottom: 25px;
+} */
+#same_line{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-style: outset;
+    border-width: 4px;
+    border-radius: 15px;
+    width: 400px;
+    padding-bottom: 25px;
+}
+#bloco2 .dados{
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    display: flex;
 }
 .dados input[type="text"], .dados input[type="password"], .dados input[type="number"], .dados input[type="email"]
 , .dados input[type="date"], .dados select{
@@ -15,11 +36,30 @@
     font-size: 16px;
     margin-bottom: 3%;
 }
-.dados #divRadioGenero input[type="radio"]{
-    margin-left: 85%;
+#divRadioGenero input[type="radio"], #divCheckboxResponsaveis input[type="checkbox"], #divRadioTrabalha input[type="radio"], #divCheckboxTurno input[type="checkbox"]{
+    margin-left: 80%;
 }
-.dados #divRadioGenero input[type="checkbox"]{
-    margin-left: 85%;
+#divGenero, #divTrabalha, #divResponsaveis, #divTurno{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    padding-bottom: 10px;
+}
+#divCheckboxResponsaveis{
+    width: 31%;
+}
+#divRadioTrabalha{
+    width: 46%;
+}
+#divRadioGenero{
+    width: 40%;
+}
+#divCheckboxTurno{
+    width: 40%;
+}
+#labelGenero{
+    margin-top: 30px;
+    padding-bottom: 20px;
 }
 .dados input[type="checkbox"]{
     appearance: "textfield";
@@ -84,19 +124,47 @@ select, .dados input[type="checkbox"], .dados input[type="date"]
 
 @media all and (max-width: 500px){
     .dados input[type="text"], .dados input[type="password"], .dados input[type="number"], .dados input[type="email"], .dados input[type="date"], .dados select{
-        padding: 3px;
+        padding: 0;
         border: 1px solid #CCC;
         box-shadow: 10px 10px 8px #888;
         border-radius: 8px;
         width: 97%;
         height: 50px;
         font-size: 16px;
-        margin-bottom: 1%;
+        margin-bottom: 7%;
     }
 }
-@media all and (max-width: 460px){
-    #bloco{
-        margin-bottom: 7%;
+@media all and (max-width: 420px){
+    #same_line{
+        width: 100%;
+    }
+}
+@media all and (max-width: 330px){
+    #divCheckboxResponsaveis{
+        width: 8%;
+    }
+    #divCheckboxResponsaveis input[type="checkbox"]{
+        margin-left: 20%;
+    }
+    #divRadioGenero{
+        width: 30%;
+    }
+    #divRadioGenero input[type="radio"]{
+        margin-left: 70%;
+    }
+    #divRadioTrabalha{
+        width: 40%;
+    }
+    #divRadioTrabalha input[type="radio"]{
+        margin-left: 80%;
+    }
+}
+@media all and (max-width: 255px){
+    #divResponsaveis label{
+        font-size: 13px;
+    }
+    #divCheckboxResponsaveis input{
+        padding-top: 4px;
     }
 }
 @media all and (max-width: 290px){

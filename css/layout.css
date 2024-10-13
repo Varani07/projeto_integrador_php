@@ -78,21 +78,6 @@ footer{
 #articleButtonCadCronograma{
     margin-bottom: 100px;
 }
-#divGenero{
-    width: 100%;
-    display: flex;
-    justify-content: left;
-    padding-bottom: 10px;
-}
-#divRadioGenero{
-    width: 50%;
-}
-#labelGenero{
-    margin-top: 30px;
-}
-#labelGenero{
-    padding-bottom: 20px;
-}
 @media all and (max-width: 445px){
     #articleButtonFlex{
         display: block;
