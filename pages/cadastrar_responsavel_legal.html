@@ -66,27 +66,7 @@
                     <a href="./cronogramas.html">Cronogramas</a>
                 </li>
                 <li>
-                    <a>Alterar</a>
-                    <ul>
-                        <li>
-                            <a href="./alterar_curso.html">Curso</a>
-                        </li>
-                        <li>
-                            <a href="./alterar_modulo.html">Módulo</a>
-                        </li>
-                        <li>
-                            <a href="./alterar_uc.html">Unidade Curricular</a>
-                        </li>
-                        <li>
-                            <a href="./alterar_turma.html">Turma</a>
-                        </li>
-                        <li>
-                            <a href="./alterar_aluno.html">Aluno</a>
-                        </li>
-                        <li>
-                            <a href="./alterar_professor.html">Professor</a>
-                        </li>
-                    </ul>
+                    <a href="./ver_alterar.html">Alterar</a>
                 </li>
                 <li>
                     <a href="../index.html">Sair</a>
@@ -138,31 +118,33 @@
                                         <input type="text" name="cpf_res_leg" maxlength="14" required/>
                                     </div>
                                 </fieldset>
-                                <fieldset id="bloco">
+                                <fieldset id="bloco2">
                                     <div class="dados">
-                                        <label id="labelGenero">Gênero:</label>
-                                        <div id="divGenero"> 
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_res_leg" value="M" checked />
+                                        <div id="same_line">
+                                            <label id="labelGenero">Gênero:</label>
+                                            <div id="divGenero"> 
+                                                <div id="divRadioGenero">
+                                                    <input type="radio" name="sexo_res_leg" value="M" checked />
+                                                </div>
+                                                <div id="divLabelGenero">
+                                                    <label id="genero">Masculino</label>
+                                                </div>
                                             </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Masculino</label>
+                                            <div id="divGenero">
+                                                <div id="divRadioGenero">
+                                                    <input type="radio" name="sexo_res_leg" value="F" />
+                                                </div>
+                                                <div id="divLabelGenero">
+                                                    <label id="genero">Feminino</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_res_leg" value="F" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Feminino</label>
-                                            </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="sexo_res_leg" value="O" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">Outro</label>
+                                            <div id="divGenero">
+                                                <div id="divRadioGenero">
+                                                    <input type="radio" name="sexo_res_leg" value="O" />
+                                                </div>
+                                                <div id="divLabelGenero">
+                                                    <label id="genero">Outro</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -225,7 +207,7 @@
                         </form>
                     </div>
                 </article>
-                <article id="articleButton">
+                <article id="articleButtonCadCronograma">
                     <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnLogin" name="btnCadastrar_Responsavel_Legal">Cadastrar</button></p>
                 </article>
             </section>

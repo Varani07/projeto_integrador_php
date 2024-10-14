@@ -13,12 +13,12 @@
     <body>
         <main class="corpo">
             <header>
-                <section id="sectionHeader">
+                <section id="sectionHeader2">
                     <article id="articleHeaderLogo">
                         <a href="./area_usuario_home.html"><img class="imgLogo" src="../img/senac_logo_new.png" alt="senac_logo" title="Senac Logo" /></a>
                     </article>
                     <article id="articleHeaderTitle">
-                        <h1 class="h1">Área do Usuário</h1>
+                        <h1 class="h1">Área do Administrador</h1>
                     </article>
                 </section>
             </header>
@@ -28,45 +28,24 @@
             <nav id="menu">
                 <ul>
                     <li>
-                        <a href="./area_usuario_home.html">Início</a>
+                        <a href="./area_adm_home.html">Início</a>
                     </li>
                 <li>
-                    <a>Cadastrar</a>
+                    <a>Gerenciar</a>
                     <ul>
                         <li>
-                            <a href="./cadastrar_curso.html">Curso</a>
+                            <a href="./gerenciar_usuario.html">Usuários</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_modulo.html">Módulo</a>
-                        </li>
-                        <li>
-                            <a href="./cadastrar_uc.html">Unidade Curricular</a>
-                        </li>
-                        <li>
-                            <a href="./cadastrar_turma.html">Turma</a>
-                        </li>
-                        <li>
-                            <a href="./cadastrar_aluno.html">Aluno</a>
-                        </li>
-                        <li>
-                            <a href="./cadastrar_professor.html">Professor</a>
-                        </li>
-                        <li>
-                            <a href="./cadastrar_cronograma.html">Cronograma</a>
-                        </li>
-                        <li>
-                            <a href="./cadastrar_professor_uc.html">Professor em UC</a>
-                        </li>
-                        <li>
-                            <a href="./cadastrar_aluno_turma.html">Aluno em Turma</a>
+                            <a href="./gerenciar_adm.html">Administradores</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./cronogramas.html">Cronogramas</a>
+                    <a href="./cadastrar_adm.html">Cadastrar Adm.</a>
                 </li>
                 <li>
-                    <a href="./ver_alterar.html">Alterar</a>
+                    <a href="./log_eventos.html">Log</a>
                 </li>
                 <li>
                     <a href="../index.html">Sair</a>
@@ -76,46 +55,59 @@
             <hr id="hr2" />
             <section id="sectionMeio">
                 <article id="articleTitulo">
-                    <h2 class="h2Titulo">Cadastrar Unidade Curricular</h2>
+                    <h2 class="h2Titulo" id="nomeUsuario">Informações Pessoais</h2>
                 </article>
                 <article id="articleInput">
                     <div id="divLabel">
                         <form action="#" method="post">
                             <fieldset id="fieldsetLabel">
-                                <fieldset id="bloco">
+                                <fieldset id="bloco2">
                                     <div class="dados">
-                                        <label>Curso:</label>
-                                        <select name="nome_curso">
-                                            <option value="curso1" selected>Preencher com Cursos Cadastrados</option>
-                                        </select>
+                                        <div id="same_line">
+                                            <label id="label_cargo">Nível de acesso: #</label>
+                                        </div>
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>Módulo:</label>
-                                        <select name="nome_modulo">
-                                            <option value="curso1" selected>Preencher com Módulos Cadastrados</option>
-                                        </select>
+                                        <label>Nome de Usuário:</label>
+                                        <input type="text" name="username" maxlength="40" required />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>Unidade Curricular:</label>
-                                        <input type="text" name="nome_uc" maxlength="60" required/>
+                                        <label>CPF:</label>
+                                        <input type="text" name="cpf" maxlength="14" required />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>Carga Horária (hrs):</label>
-                                        <input type="number" name="carga_horaria" maxlength="60" required/>
+                                        <label>E-mail:</label>
+                                        <input type="text" name="email" maxlength="50" required />
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco">
+                                    <div class="dados">
+                                        <label>Senha:</label>
+                                        <p class="reqSenha">Mínimo 6 caracteres (3 letras, 2 números e 1 caracter especial)</p>
+                                        <input type="password" name="password" maxlength="60" required />
+                                        <input type="checkbox" name="ver_senha" />
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco">
+                                    <div class="dados">
+                                        <label>Confirme sua senha:</label>
+                                        <input type="password" name="confirm_password" maxlength="60" required />
+                                        <input type="checkbox" name="ver_senhaC" />
                                     </div>
                                 </fieldset>
                             </fieldset>
                         </form>
                     </div>
                 </article>
-                <article id="articleButtonCadCronograma">
-                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnLogin" name="btnCadastrar_Uc">Cadastrar</button></p>
+                <article id="articleButtonFlex">
+                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Usuarios">Alterar Dados</button></p>
+                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Usuarios">Deletar Conta</button></p>
                 </article>
             </section>
             <hr id="hr1" />

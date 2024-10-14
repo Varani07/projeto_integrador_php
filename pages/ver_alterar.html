@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css"/>
         <link rel="stylesheet" type="text/css" href="../css/form.css"/>
         <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/tables.css"/>
     </head>
     <body>
         <main class="corpo">
@@ -76,7 +77,7 @@
             <hr id="hr2" />
             <section id="sectionMeio">
                 <article id="articleTitulo">
-                    <h2 class="h2Titulo">Cadastrar Unidade Curricular</h2>
+                    <h2 class="h2Titulo">Alterar Info</h2>
                 </article>
                 <article id="articleInput">
                     <div id="divLabel">
@@ -84,38 +85,44 @@
                             <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>Curso:</label>
-                                        <select name="nome_curso">
-                                            <option value="curso1" selected>Preencher com Cursos Cadastrados</option>
+                                        <label id="labelExplicacao">Defina os campos abaixo para pesquisar as informações</label>
+                                        <select name="tipo_pessoa">
+                                            <option value="" selected>selecione</option>
+                                            <option value="aluno">Aluno</option>
+                                            <option value="professor">Professor</option>
+                                            <option value="responsavel">Responsável</option>
                                         </select>
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>Módulo:</label>
-                                        <select name="nome_modulo">
-                                            <option value="curso1" selected>Preencher com Módulos Cadastrados</option>
+                                        <select name="tipo_info">
+                                            <option value="" selected>selecione</option>
                                         </select>
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>Unidade Curricular:</label>
-                                        <input type="text" name="nome_uc" maxlength="60" required/>
+                                        <select name="pessoa_escolhida">
+                                            <option value="" selected>selecione</option>
+                                        </select>
                                     </div>
                                 </fieldset>
+                                <article id="articleButtonCadCronograma">
+                                    <p class="pCenter" id="btns"><button type="submit" class="botao3" id="btnBuscar" name="btnBuscarCronograma">Pesquisar</button></p>
+                                </article>
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>Carga Horária (hrs):</label>
-                                        <input type="number" name="carga_horaria" maxlength="60" required/>
+                                        <label name="label_alterar_info"></label>
+                                        <input type="text" name="alterar_info" required/>
                                     </div>
                                 </fieldset>
+                                <article id="articleButtonCadCronograma">
+                                    <p class="pCenter" id="btns"><button type="submit" class="botao3" id="btnLogin" name="btnBuscarCronograma">Alterar</button></p>
+                                </article>
                             </fieldset>
                         </form>
                     </div>
-                </article>
-                <article id="articleButtonCadCronograma">
-                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnLogin" name="btnCadastrar_Uc">Cadastrar</button></p>
                 </article>
             </section>
             <hr id="hr1" />

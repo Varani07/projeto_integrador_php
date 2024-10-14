@@ -9,16 +9,17 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css"/>
         <link rel="stylesheet" type="text/css" href="../css/form.css"/>
         <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/tables.css"/>
     </head>
     <body>
         <main class="corpo">
             <header>
-                <section id="sectionHeader">
+                <section id="sectionHeader2">
                     <article id="articleHeaderLogo">
                         <a href="./area_usuario_home.html"><img class="imgLogo" src="../img/senac_logo_new.png" alt="senac_logo" title="Senac Logo" /></a>
                     </article>
                     <article id="articleHeaderTitle">
-                        <h1 class="h1">Área do Usuário</h1>
+                        <h1 class="h1">Área do Administrador</h1>
                     </article>
                 </section>
             </header>
@@ -28,45 +29,24 @@
             <nav id="menu">
                 <ul>
                     <li>
-                        <a href="./area_usuario_home.html">Início</a>
+                        <a href="./area_adm_home.html">Início</a>
                     </li>
                 <li>
-                    <a>Cadastrar</a>
+                    <a>Gerenciar</a>
                     <ul>
                         <li>
-                            <a href="./cadastrar_curso.html">Curso</a>
+                            <a href="./gerenciar_usuario.html">Usuários</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_modulo.html">Módulo</a>
-                        </li>
-                        <li>
-                            <a href="./cadastrar_uc.html">Unidade Curricular</a>
-                        </li>
-                        <li>
-                            <a href="./cadastrar_turma.html">Turma</a>
-                        </li>
-                        <li>
-                            <a href="./cadastrar_aluno.html">Aluno</a>
-                        </li>
-                        <li>
-                            <a href="./cadastrar_professor.html">Professor</a>
-                        </li>
-                        <li>
-                            <a href="./cadastrar_cronograma.html">Cronograma</a>
-                        </li>
-                        <li>
-                            <a href="./cadastrar_professor_uc.html">Professor em UC</a>
-                        </li>
-                        <li>
-                            <a href="./cadastrar_aluno_turma.html">Aluno em Turma</a>
+                            <a href="./gerenciar_adm.html">Administradores</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./cronogramas.html">Cronogramas</a>
+                    <a href="./cadastrar_adm.html">Cadastrar Adm.</a>
                 </li>
                 <li>
-                    <a href="./ver_alterar.html">Alterar</a>
+                    <a href="./log_eventos.html">Log</a>
                 </li>
                 <li>
                     <a href="../index.html">Sair</a>
@@ -76,7 +56,7 @@
             <hr id="hr2" />
             <section id="sectionMeio">
                 <article id="articleTitulo">
-                    <h2 class="h2Titulo" id="nomeUsuario">Informações Pessoais</h2>
+                    <h2 class="h2Titulo" id="nomeUsuario">Gerenciar Adm</h2>
                 </article>
                 <article id="articleInput">
                     <div id="divLabel">
@@ -84,20 +64,71 @@
                             <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>Usuário:</label>
+                                        <label>Nome:</label>
                                         <input type="text" name="username" maxlength="40" required />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>CPF:</label>
-                                        <input type="text" name="cpf" maxlength="14" required />
+                                        <label>Nível de Acesso:</label>
+                                        <select name="tipo_pesquisa">
+                                            <option value="all" selected>Todos</option>
+                                            <option value="any">Com acesso</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco2_table_adm">
+                                    <div class="dados_table">
+                                        <table id="table_adm">
+                                            <caption>
+                                                Adm's
+                                            </caption>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>USER</th>
+                                                <th>PERM</th>
+                                                <th>NÍVEL</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>usuario 1</td>
+                                                <td><input type="checkbox" checked disabled></td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>usuario 2</td>
+                                                <td><input type="checkbox" disabled></td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>usuario 3</td>
+                                                <td><input type="checkbox" checked disabled></td>
+                                                <td>3</td>
+                                            </tr>
+                                        </table>
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>E-mail:</label>
-                                        <input type="text" name="email" maxlength="50" required />
+                                        <label>Usuário:</label>
+                                        <input type="text" name="nome_usuario" maxlength="40" required />
+                                    </div>
+                                </fieldset>
+                                <fieldset id="bloco">
+                                    <div class="dados">
+                                        <label>Nível de Acesso:</label>
+                                        <select name="tipo_pesquisa">
+                                            <option value="0" selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
@@ -119,7 +150,7 @@
                         </form>
                     </div>
                 </article>
-                <article id="articleButtonFlex">
+                <article id="articleButtonFlex2">
                     <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Usuarios">Alterar Dados</button></p>
                     <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Usuarios">Deletar Conta</button></p>
                 </article>

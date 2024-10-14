@@ -61,7 +61,7 @@ label[for="bt_menu"]{
 #sectionMenuInf #menu ul li ul{
     display: none;
 }
-@media all and (max-width: 950px){
+@media all and (max-width: 800px){
     #sectionMenuInf{
         display: none;
     }

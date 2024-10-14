@@ -25,7 +25,8 @@
     justify-content: center;
     display: flex;
 }
-.dados input[type="text"], .dados input[type="password"], .dados input[type="number"], .dados input[type="email"]
+.dados input[type="text"], .dados input[type="password"], 
+.dados input[type="number"], .dados input[type="email"]
 , .dados input[type="date"], .dados select{
     padding: 3px;
     border: 1px solid #CCC;
@@ -36,10 +37,12 @@
     font-size: 16px;
     margin-bottom: 3%;
 }
-#divRadioGenero input[type="radio"], #divCheckboxResponsaveis input[type="checkbox"], #divRadioTrabalha input[type="radio"], #divCheckboxTurno input[type="checkbox"]{
+#divRadioGenero input[type="radio"], #divCheckboxResponsaveis input[type="checkbox"], 
+#divRadioTrabalha input[type="radio"], #divCheckboxTurno input[type="checkbox"], 
+#divRadioModulo input[type="radio"]{
     margin-left: 80%;
 }
-#divGenero, #divTrabalha, #divResponsaveis, #divTurno{
+#divGenero, #divTrabalha, #divResponsaveis, #divTurno, #divModulo{
     width: 100%;
     display: flex;
     justify-content: left;
@@ -55,7 +58,10 @@
     width: 40%;
 }
 #divCheckboxTurno{
-    width: 40%;
+    width: 46%;
+}
+#divRadioModulo{
+    width: 50%;
 }
 #labelGenero{
     margin-top: 30px;
@@ -85,6 +91,15 @@ select, .dados input[type="checkbox"], .dados input[type="date"]
 .botao2{
     font-size: 24px;
     width: 250px;
+    border: 0;
+    margin-bottom: 1%;
+    border-radius: 8px;
+    padding: 1% 1%;
+    margin-top: 30px;
+}
+.botao3{
+    font-size: 24px;
+    width: 150px;
     border: 0;
     margin-bottom: 1%;
     border-radius: 8px;
@@ -123,7 +138,9 @@ select, .dados input[type="checkbox"], .dados input[type="date"]
 }
 
 @media all and (max-width: 500px){
-    .dados input[type="text"], .dados input[type="password"], .dados input[type="number"], .dados input[type="email"], .dados input[type="date"], .dados select{
+    .dados input[type="text"], .dados input[type="password"], 
+    .dados input[type="number"], .dados input[type="email"], 
+    .dados input[type="date"], .dados select{
         padding: 0;
         border: 1px solid #CCC;
         box-shadow: 10px 10px 8px #888;
@@ -165,6 +182,18 @@ select, .dados input[type="checkbox"], .dados input[type="date"]
     }
     #divCheckboxResponsaveis input{
         padding-top: 4px;
+    }
+    #divCheckboxTurno{
+        width: 40%;
+    }
+    #divCheckboxTurno input[type="checkbox"]{
+        margin-left: 80%;
+    }
+    #divRadioModulo{
+        width: 46%;
+    }
+    #divRadioModulo input[type="radio"]{
+        margin-left: 80%;
     }
 }
 @media all and (max-width: 290px){

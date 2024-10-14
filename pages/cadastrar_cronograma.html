@@ -67,27 +67,7 @@
                     <a href="./cronogramas.html">Cronogramas</a>
                 </li>
                 <li>
-                    <a>Alterar</a>
-                    <ul>
-                        <li>
-                            <a href="./alterar_curso.html">Curso</a>
-                        </li>
-                        <li>
-                            <a href="./alterar_modulo.html">Módulo</a>
-                        </li>
-                        <li>
-                            <a href="./alterar_uc.html">Unidade Curricular</a>
-                        </li>
-                        <li>
-                            <a href="./alterar_turma.html">Turma</a>
-                        </li>
-                        <li>
-                            <a href="./alterar_aluno.html">Aluno</a>
-                        </li>
-                        <li>
-                            <a href="./alterar_professor.html">Professor</a>
-                        </li>
-                    </ul>
+                    <a href="./ver_alterar.html">Alterar</a>
                 </li>
                 <li>
                     <a href="../index.html">Sair</a>
@@ -134,42 +114,44 @@
                                 </fieldset>
                                 <fieldset id="bloco2">
                                     <div class="dados">
-                                        <label id="labelGenero">Módulo</label>
-                                        <div id="divGenero"> 
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="modulo" value="a" checked />
+                                        <div id="same_line">
+                                            <label id="labelGenero">Módulo</label>
+                                            <div id="divModulo"> 
+                                                <div id="divRadioModulo">
+                                                    <input type="radio" name="modulo" value="a" checked />
+                                                </div>
+                                                <div id="divLabelGenero">
+                                                    <label id="genero">A</label>
+                                                </div>
                                             </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">A</label>
+                                            <div id="divModulo">
+                                                <div id="divRadioModulo">
+                                                    <input type="radio" name="modulo" value="b" />
+                                                </div>
+                                                <div id="divLabelGenero">
+                                                    <label id="genero">B</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="modulo" value="b" />
+                                            <div id="divModulo">
+                                                <div id="divRadioModulo">
+                                                    <input type="radio" name="modulo" value="c" />
+                                                </div>
+                                                <div id="divLabelGenero">
+                                                    <label id="genero">C</label>
+                                                </div>
                                             </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">B</label>
-                                            </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="modulo" value="c" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">C</label>
-                                            </div>
-                                        </div>
-                                        <div id="divGenero">
-                                            <div id="divRadioGenero">
-                                                <input type="radio" name="modulo" value="d" />
-                                            </div>
-                                            <div id="divLabelGenero">
-                                                <label id="genero">D</label>
+                                            <div id="divModulo">
+                                                <div id="divRadioModulo">
+                                                    <input type="radio" name="modulo" value="d" />
+                                                </div>
+                                                <div id="divLabelGenero">
+                                                    <label id="genero">D</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </fieldset>
-                                <fieldset id="bloco2">
+                                <fieldset id="bloco2_cadastrar_cronogramas">
                                     <div class="dados_table">
                                         <table id="cadastrar_cronogramas">
                                             <caption>
@@ -211,7 +193,7 @@
                                     </div>
                                 </fieldset>
                                 <article id="articleButtonCadCronograma">
-                                    <p class="pCenter" id="btns"><button type="submit" class="botao2" id="btnEscolherProfessor" name="btnEscolherProfessor">Escolher Professor</button></p>
+                                    <p class="pCenter" id="btns"><button type="submit" class="botao2" id="btnEscolherProfessor" name="btnEscolherProfessor">Criar Cronograma</button></p>
                                 </article>
                             </fieldset>
                         </form>

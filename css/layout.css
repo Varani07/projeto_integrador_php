@@ -23,6 +23,12 @@ footer{
     margin: 0 auto;
     display: flex;
 }
+#sectionHeader2{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+}
 #articleHeaderLogo{
     width: 25%;
     height: auto;
@@ -69,6 +75,11 @@ footer{
     justify-content: center;
     margin-bottom: 400px;
 }
+#articleButtonFlex2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+}
 #articleButton{
     margin-bottom: 400px;
 }
@@ -78,16 +89,29 @@ footer{
 #articleButtonCadCronograma{
     margin-bottom: 100px;
 }
+#label_cargo{
+    padding-top: 28px;
+}
 @media all and (max-width: 445px){
-    #articleButtonFlex{
+    #articleButtonFlex, #articleButtonFlex2{
         display: block;
     }
 }
 @media all and (max-width: 655px){
-    #articleHeaderTitle{
+    #sectionHeader #articleHeaderTitle{
         display: none;
     }
-    #articleHeaderLogo{
+    #sectionHeader #articleHeaderLogo{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+}
+@media all and (max-width: 780px){
+    #sectionHeader2 #articleHeaderTitle{
+        display: none;
+    }
+    #sectionHeader2 #articleHeaderLogo{
         width: 100%;
         height: auto;
         text-align: center;

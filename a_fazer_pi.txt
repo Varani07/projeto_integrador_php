@@ -3,9 +3,9 @@
 (BANCO001) Banco de dados - Pronto
 (HTML/CSS001) Login - Pronto
 (HTML/CSS002) Sign In - Pronto
-(HTML/CSS003) Área Adm
-(HTML/CSS004) Área Adm / Usuários
-(HTML/CSS005) Área Adm / Administradores
+(HTML/CSS003) Área Adm - Pronto
+(HTML/CSS004) Área Adm / Usuários - Pronto
+(HTML/CSS005) Área Adm / Administradores - Pronto
 (HTML/CSS006) Área Adm / Cad. Adm.
 (HTML/CSS007) Área Adm / Log
 (HTML/CSS008) Área Usuário - Pronto
@@ -19,19 +19,14 @@
 (HTML/CSS016) Área Usuário / Cadastrar Professor - Pronto
 (HTML/CSS017) Área Usuário / Cadastrar Cronograma - Pronto
 (HTML/CSS018) Área Usuário / Cronogramas - Pronto
-(HTML/CSS019) Área Usuário / Alterar Aluno
-(HTML/CSS020) Área Usuário / Alterar Curso
-(HTML/CSS021) Área Usuário / Alterar Módulo
-(HTML/CSS022) Área Usuário / Alterar Professor
-(HTML/CSS023) Área Usuário / Alterar Turma
-(HTML/CSS024) Área Usuário / Alterar UC
-(HTML/CSS025) Área Usuário / Cadastrar Responsável Financeiro - Pronto
-(HTML/CSS026) Área Usuário / Cadastrar Responsável Legal - Pronto
+(HTML/CSS019) Área Usuário / Alterar - Pronto
+(HTML/CSS020) Área Usuário / Cadastrar Responsável Financeiro - Pronto
+(HTML/CSS021) Área Usuário / Cadastrar Responsável Legal - Pronto
 
-páginas prontas - 3/26 (03/10/24)
-páginas prontas - 10/26 (09/10/24 - 18:28)
-páginas prontas - 13/26 (09/10/24 - 18:59)
-páginas prontas - /26 (12/10/24 - )
+páginas prontas - 3/21 (03/10/24)
+páginas prontas - 10/21 (09/10/24 - 18:28)
+páginas prontas - 13/21 (09/10/24 - 18:59)
+páginas prontas - 15/21 (13/10/24 - 08:17)
 
 USER
 username varchar(40)
