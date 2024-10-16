@@ -15,7 +15,7 @@
             <header>
                 <section id="sectionHeader2">
                     <article id="articleHeaderLogo">
-                        <a href="./area_usuario_home.php"><img class="imgLogo" src="../img/senac_logo_new.png" alt="senac_logo" title="Senac Logo" /></a>
+                        <a href="./area_adm_home.php"><img class="imgLogo" src="../img/senac_logo_new.png" alt="senac_logo" title="Senac Logo" /></a>
                     </article>
                     <article id="articleHeaderTitle">
                         <h1 class="h1">Área do Administrador</h1>
@@ -28,27 +28,27 @@
             <nav id="menu">
                 <ul>
                     <li>
-                        <a href="./area_adm_home.html">Início</a>
+                        <a href="./area_adm_home.php">Início</a>
                     </li>
                 <li>
                     <a>Gerenciar</a>
                     <ul>
                         <li>
-                            <a href="./gerenciar_usuario.html">Usuários</a>
+                            <a href="./gerenciar_usuario.php">Usuários</a>
                         </li>
                         <li>
-                            <a href="./gerenciar_adm.html">Administradores</a>
+                            <a href="./gerenciar_adm.php">Administradores</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./cadastrar_adm.html">Cadastrar Adm.</a>
+                    <a href="./cadastrar_adm.php">Cadastrar Adm.</a>
                 </li>
                 <li>
-                    <a href="./log_eventos.html">Log</a>
+                    <a href="./log_eventos.php">Log</a>
                 </li>
                 <li>
-                    <a href="../index.html">Sair</a>
+                    <a href="./login.php">Sair</a>
                 </li>
                 </ul>
             </nav>

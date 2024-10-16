@@ -15,7 +15,7 @@
             <header>
                 <section id="sectionHeader">
                     <article id="articleHeaderLogo">
-                        <a href="./area_usuario_home.html"><img class="imgLogo" src="../img/senac_logo_new.png" alt="senac_logo" title="Senac Logo" /></a>
+                        <a href="./area_usuario_home.php"><img class="imgLogo" src="../img/senac_logo_new.png" alt="senac_logo" title="Senac Logo" /></a>
                     </article>
                     <article id="articleHeaderTitle">
                         <h1 class="h1">Área do Usuário</h1>
@@ -28,48 +28,48 @@
             <nav id="menu">
                 <ul>
                     <li>
-                        <a href="./area_usuario_home.html">Início</a>
+                        <a href="./area_usuario_home.php">Início</a>
                     </li>
                 <li>
                     <a>Cadastrar</a>
                     <ul>
                         <li>
-                            <a href="./cadastrar_curso.html">Curso</a>
+                            <a href="./cadastrar_curso.php">Curso</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_modulo.html">Módulo</a>
+                            <a href="./cadastrar_modulo.php">Módulo</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_uc.html">Unidade Curricular</a>
+                            <a href="./cadastrar_uc.php">Unidade Curricular</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_turma.html">Turma</a>
+                            <a href="./cadastrar_turma.php">Turma</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_aluno.html">Aluno</a>
+                            <a href="./cadastrar_aluno.php">Aluno</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_professor.html">Professor</a>
+                            <a href="./cadastrar_professor.php">Professor</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_cronograma.html">Cronograma</a>
+                            <a href="./cadastrar_cronograma.php">Cronograma</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_professor_uc.html">Professor em UC</a>
+                            <a href="./cadastrar_professor_uc.php">Professor em UC</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_aluno_turma.html">Aluno em Turma</a>
+                            <a href="./cadastrar_aluno_turma.php">Aluno em Turma</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./cronogramas.html">Cronogramas</a>
+                    <a href="./cronogramas.php">Cronogramas</a>
                 </li>
                 <li>
-                    <a href="./ver_alterar.html">Alterar</a>
+                    <a href="./ver_alterar.php">Alterar</a>
                 </li>
                 <li>
-                    <a href="../index.html">Sair</a>
+                    <a href="./index.php">Sair</a>
                 </li>
                 </ul>
             </nav>
