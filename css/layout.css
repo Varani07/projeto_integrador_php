@@ -68,7 +68,11 @@ footer{
 #articleTitulo{
     width: 100%;
     height: auto;
-    padding-top: 4%
+    padding-top: 12%;
+    padding-bottom: 70px;
+}
+#articleEspaco{
+    margin-bottom: 100px;
 }
 #articleButtonFlex{
     display: flex;
@@ -91,6 +95,9 @@ footer{
 }
 #label_cargo{
     padding-top: 28px;
+}
+#labelExplicacao{
+    margin-bottom: 100px;
 }
 @media all and (max-width: 445px){
     #articleButtonFlex, #articleButtonFlex2{

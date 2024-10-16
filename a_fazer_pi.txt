@@ -1,13 +1,13 @@
 
-(DOC001) Documentação - Alterar Para Web
+(DOC001) Documentação - Pronto
 (BANCO001) Banco de dados - Pronto
 (HTML/CSS001) Login - Pronto
 (HTML/CSS002) Sign In - Pronto
 (HTML/CSS003) Área Adm - Pronto
 (HTML/CSS004) Área Adm / Usuários - Pronto
 (HTML/CSS005) Área Adm / Administradores - Pronto
-(HTML/CSS006) Área Adm / Cad. Adm.
-(HTML/CSS007) Área Adm / Log
+(HTML/CSS006) Área Adm / Cad. Adm. - Pronto
+(HTML/CSS007) Área Adm / Log - Pronto
 (HTML/CSS008) Área Usuário - Pronto
 (HTML/CSS009) Área Usuário / Cadastrar Curso - Pronto 
 (HTML/CSS010) Área Usuário / Cadastrar Módulo - Pronto
@@ -26,7 +26,8 @@
 páginas prontas - 3/21 (03/10/24)
 páginas prontas - 10/21 (09/10/24 - 18:28)
 páginas prontas - 13/21 (09/10/24 - 18:59)
-páginas prontas - 15/21 (13/10/24 - 08:17)
+páginas prontas - 19/21 (13/10/24)
+páginas prontas - 21/21 (14/10/24)
 
 USER
 username varchar(40)

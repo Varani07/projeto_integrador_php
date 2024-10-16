@@ -31,6 +31,9 @@ td{
 tr:nth-of-type(2n){
     background: hsl(0 0% 0% / 0.15);
 }
+#bloco2_table_log{
+    margin-bottom: 200px;
+}
 
 /* TABELA PÁGINA CADASTRAR CRONOGRAMA */
 @media (max-width: 535px){
@@ -131,6 +134,39 @@ tr:nth-of-type(2n){
         }
         td:nth-last-of-type(1)::before{
             content: "Nível de acessíbilidade";
+        }
+    }
+    #table_log{
+        th{
+            display: none;
+        }
+        td{ 
+            display: grid;
+            grid-template-columns: 15ch auto;
+            gap: 0.5rem;
+            padding: 0.7rem 1rem;
+        }
+        td:first-child{
+            padding-top: 2rem;
+        }
+        td:last-child{
+            padding-bottom: 2rem;
+        }
+        td::before{
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+        td:nth-last-of-type(4)::before{
+            content: "usuário";
+        }
+        td:nth-last-of-type(3)::before{
+            content: "ação";
+        }
+        td:nth-last-of-type(2)::before{
+            content: "alvo";
+        }
+        td:nth-last-of-type(1)::before{
+            content: "data";
         }
     }
 }
@@ -259,38 +295,7 @@ tr:nth-of-type(2n){
             content: "";
         }
     }
-    #table_usuario{
-        th{
-            display: none;
-        }
-        td{ 
-            display: block;
-            padding: 0.7rem 1rem;
-        }
-        td:first-child{
-            padding-top: 2rem;
-        }
-        td:last-child{
-            padding-bottom: 2rem;
-        }
-        td::before{
-            font-weight: 700;
-            text-transform: capitalize;
-        }
-        td:nth-last-of-type(4)::before{
-            content: "";
-        }
-        td:nth-last-of-type(3)::before{
-            content: "";
-        }
-        td:nth-last-of-type(2)::before{
-            content: "";
-        }
-        td:nth-last-of-type(1)::before{
-            content: "";
-        }
-    }
-    #table_adm{
+    #table_usuario, #table_adm, #table_log{
         th{
             display: none;
         }
@@ -329,13 +334,7 @@ tr:nth-of-type(2n){
     }
 }
 @media (max-width: 250px){
-    #bloco2_cronogramas .dados_table{
-        width: min(900px, 100% - 3rem);
-        margin-inline: unset;
-    }
-}
-@media (max-width: 250px){
-    #bloco2_table_usuario .dados_table{
+    #bloco2_cronogramas .dados_table, #bloco2_table_usuario .dados_table{
         width: min(900px, 100% - 3rem);
         margin-inline: unset;
     }

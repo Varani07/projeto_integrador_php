@@ -9,7 +9,6 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css"/>
         <link rel="stylesheet" type="text/css" href="../css/form.css"/>
         <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/tables.css"/>
     </head>
     <body>
         <main class="corpo">
@@ -64,58 +63,6 @@
                             <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>Nome:</label>
-                                        <input type="text" name="username" maxlength="40" required />
-                                    </div>
-                                </fieldset>
-                                <fieldset id="bloco">
-                                    <div class="dados">
-                                        <label>Nível de Acesso:</label>
-                                        <select name="tipo_pesquisa">
-                                            <option value="all" selected>Todos</option>
-                                            <option value="any">Com acesso</option>
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </div>
-                                </fieldset>
-                                <fieldset id="bloco2_table_adm">
-                                    <div class="dados_table">
-                                        <table id="table_adm">
-                                            <caption>
-                                                Adm's
-                                            </caption>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>USER</th>
-                                                <th>PERM</th>
-                                                <th>NÍVEL</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>usuario 1</td>
-                                                <td><input type="checkbox" checked disabled></td>
-                                                <td>1</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>usuario 2</td>
-                                                <td><input type="checkbox" disabled></td>
-                                                <td>0</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>usuario 3</td>
-                                                <td><input type="checkbox" checked disabled></td>
-                                                <td>3</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </fieldset>
-                                <fieldset id="bloco">
-                                    <div class="dados">
                                         <label>Usuário:</label>
                                         <input type="text" name="nome_usuario" maxlength="40" required />
                                     </div>
@@ -124,7 +71,8 @@
                                     <div class="dados">
                                         <label>Nível de Acesso:</label>
                                         <select name="tipo_pesquisa">
-                                            <option value="0" selected>0</option>
+                                            <option value="" selected>selecione</option>
+                                            <option value="0">0</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -150,9 +98,8 @@
                         </form>
                     </div>
                 </article>
-                <article id="articleButtonFlex2">
-                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Usuarios">Alterar Dados</button></p>
-                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Usuarios">Deletar Conta</button></p>
+                <article id="articleButton">
+                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnLogin" name="btnAlterar_Dados_Usuarios">Cadastrar</button></p>
                 </article>
             </section>
             <hr id="hr1" />

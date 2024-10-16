@@ -25,6 +25,9 @@
     justify-content: center;
     display: flex;
 }
+#bloco{
+    margin-bottom: 20px;
+}
 .dados input[type="text"], .dados input[type="password"], 
 .dados input[type="number"], .dados input[type="email"]
 , .dados input[type="date"], .dados select{
