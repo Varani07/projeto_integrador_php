@@ -15,7 +15,7 @@
             <header>
                 <section id="sectionHeader2">
                     <article id="articleHeaderLogo">
-                        <a href="./area_usuario_home.html"><img class="imgLogo" src="../img/senac_logo_new.png" alt="senac_logo" title="Senac Logo" /></a>
+                        <a href="./area_usuario_home.php"><img class="imgLogo" src="../img/senac_logo_new.png" alt="senac_logo" title="Senac Logo" /></a>
                     </article>
                     <article id="articleHeaderTitle">
                         <h1 class="h1">Área do Administrador</h1>
