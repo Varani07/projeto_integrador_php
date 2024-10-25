@@ -31,12 +31,13 @@
                 </article>
                 <article id="articleInput">
                     <div id="divLabel">
-                        <form name="frmLogin" action="#" method="post">
+                        <form name="frmLogin" action="../controller/pedagogicoBO.php" method="post">
                             <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Usuário:</label>
-                                        <input type="text" name="username" maxlength="40" required />
+                                        <input type="text" name="txtusername" maxlength="40" required />
+                                        <input type="hidden" name="acao" value="efetuar_login"/>
                                         <select name="entry_type" required>
                                             <option value="usuario" selected>Usuário</option>
                                             <option value="administrador">Administrador</option>
@@ -46,8 +47,8 @@
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Senha:</label>
-                                        <input type="password" name="password" maxlength="60" required />
-                                        <input type="checkbox" name="ver_senha" />
+                                        <input type="password" name="txtpassword" maxlength="50" required />
+                                        <input type="checkbox" name="ver_senha" hidden="True" />
                                     </div>
                                 </fieldset>
                             </fieldset>
@@ -68,5 +69,17 @@
                 </section>
             </footer>
         </main>
+        <script>
+            const checkbox = document.getElementById('ver_senha');
+            const senha = document.getElementById('txtpassword');
+            checkbox.addEventListener('change',
+            function(){
+                if(checkbox.checked){
+                    senha.type = 'text';
+                }else{
+                    senha.type = 'password';
+                }
+            });
+        </script>
     </body>
 </html>

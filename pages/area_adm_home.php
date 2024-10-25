@@ -60,6 +60,9 @@
                 <article id="articleInput">
                     <div id="divLabel">
                         <form action="#" method="post">
+                            <?php
+                                
+                            ?>
                             <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco2">
                                     <div class="dados">
@@ -70,20 +73,8 @@
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label>Nome de Usuário:</label>
-                                        <input type="text" name="username" maxlength="35" required />
-                                    </div>
-                                </fieldset>
-                                <fieldset id="bloco">
-                                    <div class="dados">
-                                        <label>CPF:</label>
-                                        <input type="text" name="cpf" maxlength="15" required />
-                                    </div>
-                                </fieldset>
-                                <fieldset id="bloco">
-                                    <div class="dados">
-                                        <label>E-mail:</label>
-                                        <input type="text" name="email" maxlength="40" required />
+                                        <label>Nome:</label>
+                                        <input type="text" name="username" maxlength="35" value="" required />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
