@@ -57,6 +57,15 @@
                     }
                 }
                 break;
+
+            case 'mudar_adm_info_home':
+                if(isset($_POST['btnAlterar_Dados_Usuarios']) && !empty($_POST['btnAlterar_Dados_Usuarios'])){
+
+                }else{
+                    if(isset($_POST['btnDeletar_Dados_Usuarios']) && !empty($_POST['btnDeletar_Dados_Usuarios'])){
+
+                    }
+                }
             
             default:
                 break;

@@ -59,37 +59,46 @@
                 </article>
                 <article id="articleInput">
                     <div id="divLabel">
-                        <form action="#" method="post">
+                        <formv name="frmAdmHome" action="../controller/pedagogicoBO.php" method="post">
                             <?php
-                                
+                                include_once '../model/database/AdmDAO.php';
+                                $dao = new AdmDAO();
+                                $id_adm = $_GET['id_adm'];
+                                $info_adm = $dao->get_info($id_adm);
+                                foreach ($info_adm as $adm_obj){
                             ?>
                             <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco2">
                                     <div class="dados">
                                         <div id="same_line">
-                                            <label id="label_cargo">Nível de acesso: #</label>
+                                            <label id="label_cargo">Nível de acesso: <?php echo $adm_obj->cargo; ?></label>
                                         </div>
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Nome:</label>
-                                        <input type="text" name="username" maxlength="35" value="" required />
+                                        <input type="text" name="txtusername" maxlength="40" value="<?php echo $adm_obj->user_adm; ?>" required />
+                                        <input type="hidden" name="acao" value="mudar_adm_info_home"/>
+                                        <input type="hidden" name="id" value="<?php echo $id_adm; ?>"/>
                                     </div>
                                 </fieldset>
+                                <?php
+                                    }
+                                ?>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Senha:</label>
                                         <p class="reqSenha">Mínimo 6 caracteres (3 letras, 2 números e 1 caracter especial)</p>
-                                        <input type="password" name="password" maxlength="70" required />
-                                        <input type="checkbox" name="ver_senha" />
+                                        <input type="password" name="txtpassword" maxlength="60" required />
+                                        <input type="checkbox" name="ver_senha" hidden="True" />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Confirme sua senha:</label>
-                                        <input type="password" name="confirm_password" maxlength="70" required />
-                                        <input type="checkbox" name="ver_senhaC" />
+                                        <input type="password" name="txtconfirm_password" maxlength="60" required />
+                                        <input type="checkbox" name="ver_senhaC" hidden="True" />
                                     </div>
                                 </fieldset>
                             </fieldset>
@@ -108,5 +117,29 @@
                 </section>
             </footer>
         </main>
+        <script>
+            const checkbox = document.getElementById('ver_senha');
+            const senha = document.getElementById('txtpassword');
+            checkbox.addEventListener('change',
+            function(){
+                if(checkbox.checked){
+                    senha.type = 'text';
+                }else{
+                    senha.type = 'password';
+                }
+            });
+        </script>
+        <script>
+            const checkbox2 = document.getElementById('ver_senhaC');
+            const senha2 = document.getElementById('txtconfirm_password');
+            checkbox.addEventListener('change',
+            function(){
+                if(checkbox.checked){
+                    senha.type = 'text';
+                }else{
+                    senha.type = 'password';
+                }
+            });
+        </script>
     </body>
 </html>

@@ -47,7 +47,7 @@
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Senha:</label>
-                                        <input type="password" name="txtpassword" maxlength="50" required />
+                                        <input type="password" name="txtpassword" maxlength="60" required />
                                         <input type="checkbox" name="ver_senha" hidden="True" />
                                     </div>
                                 </fieldset>
