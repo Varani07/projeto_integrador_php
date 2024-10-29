@@ -59,7 +59,7 @@
                 </article>
                 <article id="articleInput">
                     <div id="divLabel">
-                        <formv name="frmAdmHome" action="../controller/pedagogicoBO.php" method="post">
+                        <form name="frmAdmHome" action="../controller/pedagogicoBO.php" method="post">
                             <?php
                                 include_once '../model/database/AdmDAO.php';
                                 $dao = new AdmDAO();
@@ -83,30 +83,31 @@
                                         <input type="hidden" name="id" value="<?php echo $id_adm; ?>"/>
                                     </div>
                                 </fieldset>
-                                <?php
-                                    }
-                                ?>
+                                
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Senha:</label>
                                         <p class="reqSenha">Mínimo 6 caracteres (3 letras, 2 números e 1 caracter especial)</p>
-                                        <input type="password" name="txtpassword" maxlength="60" required />
+                                        <input type="password" name="txtpassword" maxlength="60" />
                                         <input type="checkbox" name="ver_senha" hidden="True" />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Confirme sua senha:</label>
-                                        <input type="password" name="txtconfirm_password" maxlength="60" required />
+                                        <input type="password" name="txtconfirm_password" maxlength="60" />
                                         <input type="checkbox" name="ver_senhaC" hidden="True" />
                                     </div>
                                 </fieldset>
                             </fieldset>
+                            <?php
+                                    }
+                                ?>
                         </form>
                     </div>
                 </article>
                 <article id="articleButtonFlex">
-                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Usuarios">Alterar Dados</button></p>
+                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Usuarios" disabled="False">Alterar Dados</button></p>
                     <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Usuarios">Deletar Conta</button></p>
                 </article>
             </section>

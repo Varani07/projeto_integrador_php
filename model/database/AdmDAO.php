@@ -12,7 +12,7 @@ class AdmDAO {
     }
     
     public function get_info($id) {
-        $query = "SELECT user_adm, perm, cargo, password_adm FROM adm WHERE user_adm = $id";
+        $query = "SELECT user_adm, perm, cargo, password_adm FROM adm WHERE id_adm = $id";
         $conn = DB::getConnection()->query($query);
         $resultado = $conn->fetchAll();
         return $resultado;
