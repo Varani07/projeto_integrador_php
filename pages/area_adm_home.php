@@ -79,7 +79,7 @@
                                     <div class="dados">
                                         <label>Nome:</label>
                                         <input type="text" name="txtusername" maxlength="40" value="<?php echo $adm_obj->user_adm; ?>" required />
-                                        <input type="hidden" name="acao" value="mudar_adm_info_home"/>
+                                        <input type="hidden" name="acao" value="alterar"/>
                                         <input type="hidden" name="id" value="<?php echo $id_adm; ?>"/>
                                     </div>
                                 </fieldset>
@@ -88,27 +88,27 @@
                                     <div class="dados">
                                         <label>Senha:</label>
                                         <p class="reqSenha">Mínimo 6 caracteres (3 letras, 2 números e 1 caracter especial)</p>
-                                        <input type="password" name="txtpassword" maxlength="60" />
+                                        <input type="password" name="txtpassword" maxlength="70" />
                                         <input type="checkbox" name="ver_senha" hidden="True" />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Confirme sua senha:</label>
-                                        <input type="password" name="txtconfirm_password" maxlength="60" />
+                                        <input type="password" name="txtconfirm_password" maxlength="70" />
                                         <input type="checkbox" name="ver_senhaC" hidden="True" />
                                     </div>
                                 </fieldset>
                             </fieldset>
+                            <article id="articleButtonFlex">
+                                <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Adm">Alterar Dados</button></p>
+                                <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Adm">Deletar Conta</button></p>
+                            </article>
                             <?php
                                     }
                                 ?>
                         </form>
                     </div>
-                </article>
-                <article id="articleButtonFlex">
-                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Usuarios" disabled="False">Alterar Dados</button></p>
-                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Usuarios">Deletar Conta</button></p>
                 </article>
             </section>
             <hr id="hr1" />

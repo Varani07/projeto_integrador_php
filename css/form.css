@@ -78,7 +78,7 @@
     outline: none;
 }
 select, .dados input[type="checkbox"], .dados input[type="date"]
-, .dados input[type="radio"]{
+, .dados input[type="radio"], button{
     cursor: pointer;
 }
 .botao{

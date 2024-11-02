@@ -42,7 +42,7 @@
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>CPF:</label>
-                                        <input type="text" name="cpf" maxlength="14" required />
+                                        <input type="text" name="cpf" maxlength="15" required />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
@@ -55,14 +55,14 @@
                                     <div class="dados">
                                         <label>Senha:</label>
                                         <p class="reqSenha">Mínimo 6 caracteres (3 letras, 2 números e 1 caracter especial)</p>
-                                        <input type="password" name="password" maxlength="60" required />
+                                        <input type="password" name="password" maxlength="70" required />
                                         <input type="checkbox" name="ver_senha" />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Confirme sua senha:</label>
-                                        <input type="password" name="confirm_password" maxlength="60" required />
+                                        <input type="password" name="confirm_password" maxlength="70" required />
                                         <input type="checkbox" name="ver_senhaC" />
                                     </div>
                                 </fieldset>

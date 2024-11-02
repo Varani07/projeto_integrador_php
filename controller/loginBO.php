@@ -13,12 +13,11 @@
                     $senha = $_POST['txtpassword'];
                     if($tipo == 'administrador'){
                         $dao = new AdmDAO();
-                        $resultado = $dao->autentificacao($nome);
+                        $resultado = $dao->autentificacao($nome, $senha);
                         foreach($resultado as $value){
-                            $outra_senha = $value->password_adm;
                             $id = $value->id_adm;
                         }
-                        if($senha == $outra_senha){
+                        if(!empty($id)){
                             ?>
                             <script type="text/javascript">
                                 alert('Entrada permitida!');
@@ -35,15 +34,15 @@
                         }
                     }else{
                         $dao = new UsuarioDAO();
-                        $resultado = $dao->autentificacao($nome);
+                        $resultado = $dao->autentificacao($nome, $senha);
                         foreach($resultado as $value){
-                            $outra_senha = $value->senha;
+                            $id = $value->id_usuario;
                         }
-                        if($senha == $outra_senha){
+                        if(!empty($id)){
                             ?>
                             <script type="text/javascript">
                                 alert('Entrada permitida!');
-                                location.href = '../pages/area_usuario_home.php';
+                                location.href = '../pages/area_usuario_home.php?id_usuario=<?php echo $id; ?>';
                             </script>
                             <?php
                         }else{
@@ -57,16 +56,6 @@
                     }
                 }
                 break;
-
-            case 'mudar_adm_info_home':
-                if(isset($_POST['btnAlterar_Dados_Usuarios']) && !empty($_POST['btnAlterar_Dados_Usuarios'])){
-
-                }else{
-                    if(isset($_POST['btnDeletar_Dados_Usuarios']) && !empty($_POST['btnDeletar_Dados_Usuarios'])){
-
-                    }
-                }
-            
             default:
                 break;
             

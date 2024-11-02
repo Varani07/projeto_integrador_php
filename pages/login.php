@@ -31,7 +31,7 @@
                 </article>
                 <article id="articleInput">
                     <div id="divLabel">
-                        <form name="frmLogin" action="../controller/pedagogicoBO.php" method="post">
+                        <form name="frmLogin" action="../controller/loginBO.php" method="post">
                             <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco">
                                     <div class="dados">
@@ -47,7 +47,7 @@
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Senha:</label>
-                                        <input type="password" name="txtpassword" maxlength="60" required />
+                                        <input type="password" name="txtpassword" maxlength="70" required />
                                         <input type="checkbox" name="ver_senha" hidden="True" />
                                     </div>
                                 </fieldset>
