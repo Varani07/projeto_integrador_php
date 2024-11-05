@@ -18,4 +18,18 @@ class AdmDAO {
         return $resultado;
     }
     
+    public function update_adm_basico(Adm $obj) {
+        $query = "UPDATE adm SET user_adm = :p_user_adm WHERE id_adm = :p_id_adm";
+        $conn = DB::getConnection()->prepare($query);
+        $conn->execute(array(':p_user_adm'=>$obj->user_adm, ':p_id_adm'=>$obj->id_adm));
+        return $conn->rowCount()>0;
+    }
+    
+    public function update_adm_all(Adm $obj) {
+        $query = "UPDATE adm SET user_adm = :p_user_adm, password_adm = PASSWORD(:p_password_adm) WHERE id_adm = :p_id_adm";
+        $conn = DB::getConnection()->prepare($query);
+        $conn->execute(array(':p_user_adm'=>$obj->user_adm, ':p_id_adm'=>$obj->id_adm, ':p_password_adm'=>$obj->password_adm));
+        return $conn->rowCount()>0;
+    }
+    
 }

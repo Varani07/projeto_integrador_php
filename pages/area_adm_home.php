@@ -10,6 +10,13 @@
         <link rel="stylesheet" type="text/css" href="../css/form.css"/>
         <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
     </head>
+    <script>
+        function deletar(id_adm){
+            if(confirm('Tem certeza de que deseja deletar sua conta?')){
+                document.location.href='../controller/homeBO.php?acao=deletar&id='+id_adm+'&tipo=adm';
+            }
+        }
+    </script>
     <body>
         <main class="corpo">
             <header>
@@ -81,6 +88,7 @@
                                         <input type="text" name="txtusername" maxlength="40" value="<?php echo $adm_obj->user_adm; ?>" required />
                                         <input type="hidden" name="acao" value="alterar"/>
                                         <input type="hidden" name="id" value="<?php echo $id_adm; ?>"/>
+                                        <input type="hidden" name="tipo" value="adm"/>
                                     </div>
                                 </fieldset>
                                 
@@ -101,9 +109,9 @@
                                 </fieldset>
                             </fieldset>
                             <article id="articleButtonFlex">
-                                <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Adm">Alterar Dados</button></p>
-                                <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Adm">Deletar Conta</button></p>
-                            </article>
+                                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Adm">Alterar Dados</button></p>
+                                    <p class="pCenter" id="btns"><button onclick="javascript:deletar(<?php echo $id_adm ?>)" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Adm">Deletar Conta</button></p>
+                                </article>
                             <?php
                                     }
                                 ?>

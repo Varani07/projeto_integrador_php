@@ -18,10 +18,18 @@ class UsuarioDAO {
         return $resultado;
     }
     
-    public function update_usuario_basico($nome, $cpf, $email, $id) {
+    public function update_usuario_basico(Usuario $obj) {
         $query = "UPDATE usuarios SET login = :p_login, email = :p_email, cpf = :p_cpf WHERE id_usuario = :p_id";
-        $conn = DB::getConnection()->query($query);
-        $conn->execute(array());
+        $conn = DB::getConnection()->prepare($query);
+        $conn->execute(array(':p_login'=>$obj->login, ':p_email'=>$obj->email, ':p_cpf'=>$obj->cpf, ':p_id'=>$obj->id_usuario));
+        return $conn->rowCount()>0;
+    }
+    
+    public function update_usuario_all(Usuario $obj) {
+        $query = "UPDATE usuarios SET login = :p_login, email = :p_email, cpf = :p_cpf, senha = PASSWORD(:p_senha) WHERE id_usuario = :p_id";
+        $conn = DB::getConnection()->prepare($query);
+        $conn->execute(array(':p_login'=>$obj->login, ':p_email'=>$obj->email, ':p_cpf'=>$obj->cpf, ':p_senha'=>$obj->senha, ':p_id'=>$obj->id_usuario));
+        return $conn->rowCount()>0;
     }
     
 }

@@ -134,14 +134,14 @@
                                         <input type="checkbox" name="ver_senhaC" hidden="True" />
                                     </div>
                                 </fieldset>
+                                <article id="articleButtonFlex">
+                                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Usuarios">Alterar Dados</button></p>
+                                    <p class="pCenter" id="btns"><button onclick="javascript:deletar(<?php echo $id_usuario ?>)" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Usuarios">Deletar Conta</button></p>
+                                </article>
                             </fieldset>
                             <?php } ?>
                         </form>
                     </div>
-                </article>
-                <article id="articleButtonFlex">
-                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Usuarios">Alterar Dados</button></p>
-                    <p class="pCenter" id="btns"><button onclick="javascript:deletar(<?php echo $id_usuario ?>)" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Usuarios">Deletar Conta</button></p>
                 </article>
             </section>
             <hr id="hr1" />

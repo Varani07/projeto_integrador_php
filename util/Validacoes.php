@@ -6,7 +6,7 @@ abstract class Validacoes {
 
         $ok = true;
         $volta = 1;
-        if(str_word_count($cpf) == 14){
+        if(strlen($cpf) == 14){
             $ok = false;
         }else{
             foreach ($cpf_repartida as $char){
@@ -14,17 +14,23 @@ abstract class Validacoes {
                     case 1: case 2: case 3: case 5: case 6: case 7: case 9: case 10: case 11: case 13: case 14:
                         if(!is_numeric($char)){
                             $ok = false;
+                        }else{
+                            $volta += 1;
                         }
                         break;
                     case 4: case 8:
                         if(!$char == "."){
                             $ok = false;
+                        }else{
+                            $volta += 1;
                         }
                         break;
 
                     case 12:
                         if(!$char == "-"){
                             $ok = false;
+                        }else{
+                            $volta += 1;
                         }
                         break;
                     default:
@@ -49,7 +55,7 @@ abstract class Validacoes {
 
         $ok = true;
         $volta = 1;
-        if(str_word_count($celular) == 14){
+        if(strlen($celular) == 14){
             $ok = false;
         }else{
             foreach ($celular_repartida as $char){
@@ -57,21 +63,29 @@ abstract class Validacoes {
                     case 2: case 3: case 5: case 6: case 7: case 8: case 9: case 11: case 12: case 13: case 14:
                         if(!is_numeric($char)){
                             $ok = false;
+                        }else{
+                            $volta += 1;
                         }
                         break;
                     case 1:
                         if(!$char == "("){
                             $ok = false;
+                        }else{
+                            $volta += 1;
                         }
                         break;
                     case 4:
                         if(!$char == ")"){
                             $ok = false;
+                        }else{
+                            $volta += 1;
                         }
                         break;
                     case 10:
                         if(!$char == "-"){
                             $ok = false;
+                        }else{
+                            $volta += 1;
                         }
                         break;
                     default:
@@ -94,7 +108,7 @@ abstract class Validacoes {
         $special_caracteres = '!@#$%¨&*';
         $special_caracteres = str_split($special_caracteres);
 
-        if (str_word_count($senha) < 6){
+        if (strlen($senha) < 6){
             return false;
         }else{
             foreach ($senha_repartida as $char){
