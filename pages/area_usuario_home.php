@@ -38,45 +38,45 @@
             <nav id="menu">
                 <ul>
                     <li>
-                        <a href="./area_usuario_home.php?id_usuario<?php echo $id_usuario; ?>">Início</a>
+                        <a href="./area_usuario_home.php?id_usuario=<?php echo $id_usuario; ?>">Início</a>
                     </li>
                 <li>
                     <a>Cadastrar</a>
                     <ul>
                         <li>
-                            <a href="./cadastrar_curso.php?id_usuario<?php echo $id_usuario; ?>">Curso</a>
+                            <a href="./cadastrar_curso.php?id_usuario=<?php echo $id_usuario; ?>">Curso</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_modulo.php?id_usuario<?php echo $id_usuario; ?>">Módulo</a>
+                            <a href="./cadastrar_modulo.php?id_usuario=<?php echo $id_usuario; ?>">Módulo</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_uc.php?id_usuario<?php echo $id_usuario; ?>">Unidade Curricular</a>
+                            <a href="./cadastrar_uc.php?id_usuario=<?php echo $id_usuario; ?>">Unidade Curricular</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_turma.php?id_usuario<?php echo $id_usuario; ?>">Turma</a>
+                            <a href="./cadastrar_turma.php?id_usuario=<?php echo $id_usuario; ?>">Turma</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_aluno.php?id_usuario<?php echo $id_usuario; ?>">Aluno</a>
+                            <a href="./cadastrar_aluno.php?id_usuario=<?php echo $id_usuario; ?>">Aluno</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_professor.php?id_usuario<?php echo $id_usuario; ?>">Professor</a>
+                            <a href="./cadastrar_professor.php?id_usuario=<?php echo $id_usuario; ?>">Professor</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_cronograma.php?id_usuario<?php echo $id_usuario; ?>">Cronograma</a>
+                            <a href="./cadastrar_cronograma.php?id_usuario=<?php echo $id_usuario; ?>">Cronograma</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_professor_uc.php?id_usuario<?php echo $id_usuario; ?>">Professor em UC</a>
+                            <a href="./cadastrar_professor_uc.php?id_usuario=<?php echo $id_usuario; ?>">Professor em UC</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_aluno_turma.php?id_usuario<?php echo $id_usuario; ?>">Aluno em Turma</a>
+                            <a href="./cadastrar_aluno_turma.php?id_usuario=<?php echo $id_usuario; ?>">Aluno em Turma</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./cronogramas.php?id_usuario<?php echo $id_usuario; ?>">Cronogramas</a>
+                    <a href="./cronogramas.php?id_usuario=<?php echo $id_usuario; ?>">Cronogramas</a>
                 </li>
                 <li>
-                    <a href="./ver_alterar.php?id_usuario<?php echo $id_usuario; ?>">Alterar</a>
+                    <a href="./ver_alterar.php?id_usuario=<?php echo $id_usuario; ?>">Alterar</a>
                 </li>
                 <li>
                     <a href="./login.php">Sair</a>

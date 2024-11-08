@@ -17,6 +17,13 @@ class UsuarioDAO {
         $resultado = $conn->fetchAll();
         return $resultado;
     }
+
+    public function get_info_all() {
+        $query = "SELECT id_usuario, login, email, cpf FROM usuarios";
+        $conn = DB::getConnection()->query($query);
+        $resultado = $conn->fetchAll();
+        return $resultado;
+    }
     
     public function update_usuario_basico(Usuario $obj) {
         $query = "UPDATE usuarios SET login = :p_login, email = :p_email, cpf = :p_cpf WHERE id_usuario = :p_id";

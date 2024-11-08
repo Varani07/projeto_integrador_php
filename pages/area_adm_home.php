@@ -17,12 +17,13 @@
             }
         }
     </script>
+    <?php $id_adm = $_GET['id_adm']; ?>
     <body>
         <main class="corpo">
             <header>
                 <section id="sectionHeader2">
                     <article id="articleHeaderLogo">
-                        <a href="./area_adm_home.php"><img class="imgLogo" src="../img/senac_logo_new.png" alt="senac_logo" title="Senac Logo" /></a>
+                        <a href="./area_adm_home.php?id_adm=<?php echo $id_adm; ?>"><img class="imgLogo" src="../img/senac_logo_new.png" alt="senac_logo" title="Senac Logo" /></a>
                     </article>
                     <article id="articleHeaderTitle">
                         <h1 class="h1">Área do Administrador</h1>
@@ -35,24 +36,24 @@
             <nav id="menu">
                 <ul>
                     <li>
-                        <a href="./area_adm_home.php">Início</a>
+                        <a href="./area_adm_home.php?id_adm=<?php echo $id_adm; ?>">Início</a>
                     </li>
                 <li>
                     <a>Gerenciar</a>
                     <ul>
                         <li>
-                            <a href="./gerenciar_usuario.php">Usuários</a>
+                            <a href="./gerenciar_usuario.php?id_adm=<?php echo $id_adm; ?>">Usuários</a>
                         </li>
                         <li>
-                            <a href="./gerenciar_adm.php">Administradores</a>
+                            <a href="../controller/verifica_cargoBO.php?id_adm=<?php echo $id_adm; ?>&pag=gerenciar-adm">Administradores</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./cadastrar_adm.php">Cadastrar Adm.</a>
+                    <a href="../controller/verifica_cargoBO.php?id_adm=<?php echo $id_adm; ?>&pag=cad-adm">Cadastrar Adm.</a>
                 </li>
                 <li>
-                    <a href="./log_eventos.php">Log</a>
+                    <a href="../controller/verifica_cargoBO.php?id_adm=<?php echo $id_adm; ?>&pag=log">Log</a>
                 </li>
                 <li>
                     <a href="./login.php">Sair</a>
@@ -70,7 +71,6 @@
                             <?php
                                 include_once '../model/database/AdmDAO.php';
                                 $dao = new AdmDAO();
-                                $id_adm = $_GET['id_adm'];
                                 $info_adm = $dao->get_info($id_adm);
                                 foreach ($info_adm as $adm_obj){
                             ?>
