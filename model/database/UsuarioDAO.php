@@ -12,7 +12,14 @@ class UsuarioDAO {
     }
     
     public function get_info($id) {
-        $query = "SELECT login, email, cpf FROM usuarios WHERE id_usuario = $id";
+        $query = "SELECT id_usuario, login, email, cpf FROM usuarios WHERE id_usuario = $id";
+        $conn = DB::getConnection()->query($query);
+        $resultado = $conn->fetchAll();
+        return $resultado;
+    }
+
+    public function get_id_by_cpf($cpf) {
+        $query = "SELECT id_usuario FROM usuarios WHERE cpf = '$cpf'";
         $conn = DB::getConnection()->query($query);
         $resultado = $conn->fetchAll();
         return $resultado;
@@ -20,6 +27,13 @@ class UsuarioDAO {
 
     public function get_info_all() {
         $query = "SELECT id_usuario, login, email, cpf FROM usuarios";
+        $conn = DB::getConnection()->query($query);
+        $resultado = $conn->fetchAll();
+        return $resultado;
+    }
+
+    public function get_info_by_nome($nome) {
+        $query = "SELECT id_usuario, login, email, cpf FROM usuarios WHERE login LIKE '%$nome%'";
         $conn = DB::getConnection()->query($query);
         $resultado = $conn->fetchAll();
         return $resultado;

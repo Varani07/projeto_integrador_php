@@ -69,23 +69,27 @@
                 <article id="articleInput">
                     <div id="divLabel">
                         <form action="../controller/homeBO.php" method="post">
-                            <?php 
-                                include_once '../model/database/UsuarioDAO.php';
-                                $dao = new UsuarioDAO();
-                                $info_usuario = $dao->get_info_all($id_usuario);
-                                foreach ($info_usuario as $value){
-                            ?>
                             <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Pesquisar:</label>
-                                        <input type="text" name="username" maxlength="40" required />
+                                        <input type="text" name="txtusername" maxlength="40" required />
+                                        <input type="hidden" name="id" value="<?php echo $id_adm; ?>"/>
+                                        <input type="hidden" name="tipo" value="usuario"/>
                                         <select name="tipo_pesquisa">
-                                            <option value="id" selected>ID</option>
+                                            <option value="default" selected>Selecione</option>
+                                            <option value="id">ID</option>
                                             <option value="nome">Nome</option>
                                         </select>
                                     </div>
                                 </fieldset>
+                            </fieldset>
+                            <article id="articleButtonCadCronograma">
+                                <p class="pCenter" id="btns"><button type="submit" class="botao3" id="btnBuscar" name="btnBuscarCronograma">Buscar</button></p>
+                            </article>
+                        </form>
+                        <form action="../controller/homeBO.php" method="post">
+                            <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco2_table_usuario">
                                     <div class="dados_table">
                                         <table id="table_usuario">
@@ -98,47 +102,50 @@
                                                 <th>EMAIL</th>
                                                 <th>CPF</th>
                                             </tr>
+                                            <?php 
+                                                include_once '../model/database/UsuarioDAO.php';
+                                                $dao = new UsuarioDAO();
+                                                if (isset($_GET['pesquisa']) && !empty($_GET['pesquisa'])){
+                                                    $info_usuario = $_GET['pesquisa'];
+                                                }else{
+                                                    $info_usuario = $dao->get_info_all($id_usuario);
+                                                }
+                                                foreach ($info_usuario as $value){
+                                            ?>
                                             <tr>
-                                                <td>1</td>
-                                                <td>usuario 1</td>
-                                                <td>email@1.com</td>
-                                                <td>123.345.456-09</td>
+                                                <td><?php echo $value->id_usuario; ?></td>
+                                                <td><?php echo $value->login; ?></td>
+                                                <td><?php echo $value->email; ?></td>
+                                                <td><?php echo $value->cpf; ?></td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>usuario 2</td>
-                                                <td>email@2.com</td>
-                                                <td>123.345.456-09</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>usuario 3</td>
-                                                <td>email@3.com</td>
-                                                <td>123.345.456-09</td>
-                                            </tr>
+                                            <?php } ?>
                                         </table>
                                     </div>
                                 </fieldset>
+                            </fieldset>
+                        </form>
+                        <form action="../controller/homeBO.php" method="post">
+                            <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label id="labelExplicacao">Clique em algum usuário na tabela para que suas informações completem os campos abaixo.</label>
                                         <label>Nome:</label>
-                                        <input type="text" name="txtnome_user" maxlength="40" value="<?php echo $value->login; ?>" required />
+                                        <input type="text" name="txtnome_user" maxlength="40" value="" required />
                                         <input type="hidden" name="acao" value="alterar"/>
-                                        <input type="hidden" name="id" value="<?php echo $id_usuario; ?>"/>
+                                        <input type="hidden" name="id" value=""/>
                                         <input type="hidden" name="tipo" value="usuario"/>
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>E-mail:</label>
-                                        <input type="text" name="txtemail" maxlength="50" value="<?php echo $value->email; ?>" required />
+                                        <input type="text" name="txtemail" maxlength="50" value="" required />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>CPF:</label>
-                                        <input type="text" name="txtcpf" maxlength="15" value="<?php echo $value->cpf; ?>" required />
+                                        <input type="text" name="txtcpf" maxlength="15" value="" required />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
@@ -157,7 +164,6 @@
                                     </div>
                                 </fieldset>
                             </fieldset>
-                            <?php } ?>
                         </form>
                     </div>
                 </article>

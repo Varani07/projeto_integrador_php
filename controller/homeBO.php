@@ -62,7 +62,7 @@ if (isset($_REQUEST['acao']) && isset($_REQUEST['id']) && isset($_REQUEST['tipo'
                                     if($dao->update_usuario_all($usuario)){
                                         ?>
                                         <script type="text/javascript">
-                                            alert('Dados do usuário alterados com sucesso!.');
+                                            alert('Dados do usuário alterados com sucesso!');
                                             history.go(-1);
                                         </script>
                                         <?php
@@ -194,6 +194,79 @@ if (isset($_REQUEST['acao']) && isset($_REQUEST['id']) && isset($_REQUEST['tipo'
                             }
                         }
                     }
+                }
+            }
+            break;
+            
+        case 'inserir':
+            if ($tipo == 'usuario'){
+                if(isset($_POST['txtusername']) && !empty($_POST['txtusername']) && isset($_POST['txtcpf']) && !empty($_POST['txtcpf']) && 
+                        isset($_POST['txtemail']) && !empty($_POST['txtemail']) && isset($_POST['txtpassword']) && !empty($_POST['txtpassword']) && 
+                        isset($_POST['txtconfirm_password']) && !empty($_POST['txtconfirm_password'])){
+                    $usuario = new Usuario();
+                        
+                    $usuario->id_usuario = $id;
+                    $usuario->login = $_POST['txtusername'];
+                    $usuario->cpf = $_POST['txtcpf'];
+                    $usuario->email = $_POST['txtemail'];
+                    $usuario->senha = $_POST['txtpassword'];
+                    $senhaC = $_POST['txtconfirm_password'];
+                    
+                    if($usuario->senha != $senhaC){
+                        ?>
+                        <script type="text/javascript">
+                            alert('A senha deve ser a mesma em ambos os campos.');
+                            history.go(-1);
+                        </script>
+                        <?php
+                    }else{
+                        if(!Validacoes::validaSenha($usuario->senha)){
+                            ?>
+                            <script type="text/javascript">
+                                alert('Senha inválida.');
+                                history.go(-1);
+                            </script>
+                            <?php
+                        }else{
+                            if(Validacoes::validaCPF($usuario->cpf)){
+                                ?>
+                                <script type="text/javascript">
+                                    alert('CPF inválido.');
+                                    history.go(-1);
+                                </script>
+                                <?php
+                            }else{
+                                if(!Validacoes::validaEmail($usuario->email)){
+                                    ?>
+                                    <script type="text/javascript">
+                                        alert('E-mail inválido.');
+                                        history.go(-1);
+                                    </script>
+                                    <?php
+                                }else{
+                                    $dao = new UsuarioDAO();
+                                    if($dao->update_usuario_all($usuario)){
+                                        $get_id = new UsuarioDAO();
+                                        $novo_id = $get_id->get_id_by_cpf($usuario->cpf);
+                                        ?>
+                                        <script type="text/javascript">
+                                            alert('Entrada permitida!');
+                                            location.href = '../pages/area_adm_home.php?id_adm=<?php echo $novo_id; ?>';
+                                        </script>
+                                        <?php
+                                    }else{
+                                        ?>
+                                        <script type="text/javascript">
+                                            alert('Erro ao cadastrar usuário.');
+                                            history.go(-1);
+                                        </script>
+                                        <?php
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
                 }
             }
             break;

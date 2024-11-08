@@ -31,47 +31,50 @@
                 </article>
                 <article id="articleInput">
                     <div id="divLabel">
-                        <form action="#" method="post">
+                        <form action="../controller//homeBO.php" method="post">
                             <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Usuário:</label>
-                                        <input type="text" name="username" maxlength="40" required />
+                                        <input type="text" name="txtusername" maxlength="40" value='' required />
+                                        <input type="hidden" name="acao" value="inserir"/>
+                                        <input type="hidden" name="id" value=""/>
+                                        <input type="hidden" name="tipo" value="usuario"/>
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>CPF:</label>
-                                        <input type="text" name="cpf" maxlength="15" required />
+                                        <input type="text" name="txtcpf" maxlength="15" value='' required />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>E-mail:</label>
-                                        <input type="text" name="email" maxlength="50" required />
+                                        <input type="text" name="txtemail" maxlength="50" value='' required />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Senha:</label>
                                         <p class="reqSenha">Mínimo 6 caracteres (3 letras, 2 números e 1 caracter especial)</p>
-                                        <input type="password" name="password" maxlength="70" required />
-                                        <input type="checkbox" name="ver_senha" />
+                                        <input type="password" name="txtpassword" maxlength="70" value='' required />
+                                        <input type="checkbox" name="ver_senha" hidden="True" />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Confirme sua senha:</label>
-                                        <input type="password" name="confirm_password" maxlength="70" required />
-                                        <input type="checkbox" name="ver_senhaC" />
+                                        <input type="password" name="txtconfirm_password" maxlength="70" value='' required />
+                                        <input type="checkbox" name="ver_senhaC" hidden="True" />
                                     </div>
                                 </fieldset>
                             </fieldset>
+                            <article id="articleButton">
+                                <p class="pCenter"><button type="submit" class="botao" id="btnLogin" name="btnCadastrar_Usuario">Cadastrar</button></p>
+                            </article>
                         </form>
                     </div>
-                </article>
-                <article id="articleButton">
-                    <p class="pCenter"><button type="submit" class="botao" id="btnLogin" name="btnCadastrar_Usuario">Cadastrar</button></p>
                 </article>
             </section>
             <hr id="hr1" />
@@ -81,5 +84,29 @@
                 </section>
             </footer>
         </main>
+        <script>
+            const checkbox = document.getElementById('ver_senha');
+            const senha = document.getElementById('txtpassword');
+            checkbox.addEventListener('change',
+            function(){
+                if(checkbox.checked){
+                    senha.type = 'text';
+                }else{
+                    senha.type = 'password';
+                }
+            });
+        </script>
+        <script>
+            const checkbox2 = document.getElementById('ver_senhaC');
+            const senha2 = document.getElementById('txtconfirm_password');
+            checkbox.addEventListener('change',
+            function(){
+                if(checkbox.checked){
+                    senha.type = 'text';
+                }else{
+                    senha.type = 'password';
+                }
+            });
+        </script>
     </body>
 </html>
