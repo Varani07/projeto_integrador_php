@@ -12,6 +12,9 @@ class UsuarioDAO {
     }
     
     public function get_info($id) {
+        if (!is_int(($id))){
+            $id = (int) $id;
+        }
         $query = "SELECT id_usuario, login, email, cpf FROM usuarios WHERE id_usuario = $id";
         $conn = DB::getConnection()->query($query);
         $resultado = $conn->fetchAll();

@@ -12,6 +12,7 @@
         <link rel="stylesheet" type="text/css" href="../css/tables.css"/>
     </head>
     <?php $id_adm = $_GET['id_adm']; ?>
+    <?php include_once '../model/database/UsuarioDAO.php'; ?>
     <script>
         function deletar(id_usuario){
             if(confirm('Tem certeza de que deseja deletar a conta?')){
@@ -68,7 +69,7 @@
                 </article>
                 <article id="articleInput">
                     <div id="divLabel">
-                        <form action="../controller/homeBO.php" method="post">
+                        <form action="../controller/pesquisaBO.php" method="post">
                             <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco">
                                     <div class="dados">
@@ -103,12 +104,17 @@
                                                 <th>CPF</th>
                                             </tr>
                                             <?php 
-                                                include_once '../model/database/UsuarioDAO.php';
                                                 $dao = new UsuarioDAO();
-                                                if (isset($_GET['pesquisa']) && !empty($_GET['pesquisa'])){
-                                                    $info_usuario = $_GET['pesquisa'];
+                                                if (isset($_GET['conteudo']) && !empty($_GET['conteudo']) && isset($_GET['tipo']) && !empty($_GET['tipo'])){
+                                                    $conteudo = $_GET['conteudo'];
+                                                    $tipo = $_GET['tipo'];
+                                                    if($tipo == 'id'){
+                                                        $info_usuario = $dao->get_info($conteudo);
+                                                    }else{
+                                                        $info_usuario = $dao->get_info_by_nome($conteudo);
+                                                    }
                                                 }else{
-                                                    $info_usuario = $dao->get_info_all($id_usuario);
+                                                    $info_usuario = $dao->get_info_all();
                                                 }
                                                 foreach ($info_usuario as $value){
                                             ?>
@@ -119,33 +125,48 @@
                                                 <td><?php echo $value->cpf; ?></td>
                                             </tr>
                                             <?php } ?>
+                                            <fieldset id="bloco">
+                                                <div class="dados">
+                                                    <label id="labelExplicacao">Formulários referentes aos usuários mostrados na tabela apareceram abaixo da mesma.</label>
+                                                </div>
+                                            </fieldset>
                                         </table>
                                     </div>
                                 </fieldset>
                             </fieldset>
                         </form>
                         <form action="../controller/homeBO.php" method="post">
+                            <?php 
+                                if (isset($_GET['conteudo']) && !empty($_GET['conteudo']) && isset($_GET['tipo']) && !empty($_GET['tipo'])){
+                                    $conteudo = $_GET['conteudo'];
+                                    $tipo = $_GET['tipo'];
+                                    if($tipo == 'id'){
+                                        $dao = new UsuarioDAO();
+                                        $info_usuario = $dao->get_info($conteudo);
+                                    }
+                                }
+                                foreach ($info_usuario as $value){
+                            ?>
                             <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco">
                                     <div class="dados">
-                                        <label id="labelExplicacao">Clique em algum usuário na tabela para que suas informações completem os campos abaixo.</label>
                                         <label>Nome:</label>
-                                        <input type="text" name="txtnome_user" maxlength="40" value="" required />
+                                        <input type="text" name="txtusername" maxlength="40" value="<?php echo $value->login; ?>" required />
                                         <input type="hidden" name="acao" value="alterar"/>
-                                        <input type="hidden" name="id" value=""/>
+                                        <input type="hidden" name="id" value="<?php echo $value->id_usuario; ?>"/>
                                         <input type="hidden" name="tipo" value="usuario"/>
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>E-mail:</label>
-                                        <input type="text" name="txtemail" maxlength="50" value="" required />
+                                        <input type="text" name="txtemail" maxlength="50" value="<?php echo $value->email; ?>" required />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>CPF:</label>
-                                        <input type="text" name="txtcpf" maxlength="15" value="" required />
+                                        <input type="text" name="txtcpf" maxlength="15" value="<?php echo $value->cpf; ?>" required />
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
@@ -164,12 +185,13 @@
                                     </div>
                                 </fieldset>
                             </fieldset>
+                            <article id="articleButtonFlex2">
+                                <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Usuarios">Alterar Dados</button></p>
+                                <p class="pCenter" id="btns"><button onclick="javascript:deletar(<?php echo $id_usuario ?>)" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Usuarios">Deletar Conta</button></p>
+                            </article>
+                            <?php } ?>
                         </form>
                     </div>
-                </article>
-                <article id="articleButtonFlex2">
-                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Usuarios">Alterar Dados</button></p>
-                    <p class="pCenter" id="btns"><button onclick="javascript:deletar(<?php echo $id_usuario ?>)" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Usuarios">Deletar Conta</button></p>
                 </article>
             </section>
             <hr id="hr1" />

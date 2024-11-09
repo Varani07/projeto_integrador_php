@@ -12,25 +12,15 @@
                     $pesquisa = $_POST['tipo_pesquisa'];
                     $conteudo = $_POST['txtusername'];
 
-                    switch ($pesquisa){
-                        case 'default':
-                            ?>
-                            <script type="text/javascript">
-                                alert('Escolha o tipo de pesquisa a ser realizada!');
-                                history.go(-1);
-                            </script>
-                            <?php
-                            break;
-                        case 'id':
-                            $dao = new UsuarioDAO();
-                            $resultado = $dao->get_info($conteudo);
-                            header('location: ../pages/gerenciar_usuario.php?id_adm='.$id.'&pesquisa='.$resultado);
-                            break;
-                        case 'nome':
-                            $dao = new UsuarioDAO();
-                            $resultado = $dao->get_info_by_nome($conteudo);
-                            header('location: ../pages/gerenciar_usuario.php?id_adm='.$id.'&pesquisa='.$resultado);
-                            break;
+                    if ($pesquisa == 'default'){
+                        ?>
+                        <script type="text/javascript">
+                            alert('Escolha o tipo de pesquisa a ser realizada.');
+                        </script>
+                        <?php
+                        header('location: ../pages/gerenciar_usuario.php?id_adm='.$id);
+                    }else{
+                        header('location: ../pages/gerenciar_usuario.php?id_adm='.$id.'&conteudo='.$conteudo.'&tipo='.$pesquisa);
                     }
                 }
                 break;

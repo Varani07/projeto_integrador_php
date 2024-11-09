@@ -12,7 +12,7 @@ abstract class DB {
         
         if(empty(self::$conexao)){
             try {
-                self::$conexao = new PDO("mysql:host=$server;dbname=$database;", $user, $password,[PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_OBJ]);
+                self::$conexao = new PDO("mysql:host=$server;dbname=$database;port=3307;", $user, $password,[PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_OBJ]);
             } catch (PDOException $exc) {
                 dir('Erro de conexão ='.$exc->getMessage());
             }
