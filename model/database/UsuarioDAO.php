@@ -3,6 +3,13 @@
 require_once 'DB.php';
 
 class UsuarioDAO {
+
+    public function cadastrar_usuario(Usuario $obj) {
+        $query = "INSERT INTO usuarios (id_usuario, login, senha, email, cpf) VALUES (null, :plogin, PASSWORD(:psenha), :pemail, :pcpf)";
+        $conn = DB::getConnection()->prepare($query);
+        $conn->execute(array(':plogin'=>$obj->login, ':psenha'=>$obj->senha, ':pemail'=>$obj->email, ':pcpf'=>$obj->cpf));
+        return $conn->rowCount()>0;
+    }
     
     public function autentificacao($nome, $senha) {
         $query = "SELECT id_usuario FROM usuarios WHERE login = '$nome' AND senha = PASSWORD('$senha')";

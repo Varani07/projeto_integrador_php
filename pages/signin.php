@@ -31,14 +31,14 @@
                 </article>
                 <article id="articleInput">
                     <div id="divLabel">
-                        <form action="../controller//homeBO.php" method="post">
+                        <form action="../controller/homeBO.php" method="post">
                             <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Usuário:</label>
                                         <input type="text" name="txtusername" maxlength="40" value='' required />
                                         <input type="hidden" name="acao" value="inserir"/>
-                                        <input type="hidden" name="id" value=""/>
+                                        <input type="hidden" name="id" value="default"/>
                                         <input type="hidden" name="tipo" value="usuario"/>
                                     </div>
                                 </fieldset>

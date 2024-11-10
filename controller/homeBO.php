@@ -42,7 +42,7 @@ if (isset($_REQUEST['acao']) && isset($_REQUEST['id']) && isset($_REQUEST['tipo'
                             </script>
                             <?php
                         }else{
-                            if(Validacoes::validaCPF($usuario->cpf)){
+                            if(!Validacoes::validaCPF($usuario->cpf)){
                                 ?>
                                 <script type="text/javascript">
                                     alert('CPF inválido.');
@@ -89,7 +89,7 @@ if (isset($_REQUEST['acao']) && isset($_REQUEST['id']) && isset($_REQUEST['tipo'
                         $usuario->cpf = $_POST['txtcpf'];
                         $usuario->email = $_POST['txtemail'];
                         
-                        if(Validacoes::validaCPF($usuario->cpf)){
+                        if(!Validacoes::validaCPF($usuario->cpf)){
                                 ?>
                                 <script type="text/javascript">
                                     alert('CPF inválido.');
@@ -228,7 +228,7 @@ if (isset($_REQUEST['acao']) && isset($_REQUEST['id']) && isset($_REQUEST['tipo'
                             </script>
                             <?php
                         }else{
-                            if(Validacoes::validaCPF($usuario->cpf)){
+                            if(!Validacoes::validaCPF($usuario->cpf)){
                                 ?>
                                 <script type="text/javascript">
                                     alert('CPF inválido.');
@@ -245,19 +245,22 @@ if (isset($_REQUEST['acao']) && isset($_REQUEST['id']) && isset($_REQUEST['tipo'
                                     <?php
                                 }else{
                                     $dao = new UsuarioDAO();
-                                    if($dao->update_usuario_all($usuario)){
+                                    if($dao->cadastrar_usuario($usuario)){
                                         $get_id = new UsuarioDAO();
                                         $novo_id = $get_id->get_id_by_cpf($usuario->cpf);
+                                        foreach ($novo_id as $id){
+                                            $n_id = $id->id_usuario;
+                                        }
                                         ?>
                                         <script type="text/javascript">
                                             alert('Entrada permitida!');
-                                            location.href = '../pages/area_adm_home.php?id_adm=<?php echo $novo_id; ?>';
+                                            location.href = '../pages/area_usuario_home.php?id_usuario=<?php echo $n_id; ?>';
                                         </script>
                                         <?php
                                     }else{
                                         ?>
                                         <script type="text/javascript">
-                                            alert('Erro ao cadastrar usuário.');
+                                            alert('Erro ao efetuar cadastro.');
                                             history.go(-1);
                                         </script>
                                         <?php
@@ -269,6 +272,9 @@ if (isset($_REQUEST['acao']) && isset($_REQUEST['id']) && isset($_REQUEST['tipo'
                     
                 }
             }
+            break;
+        
+        case 'deletar':
             break;
 
         default:

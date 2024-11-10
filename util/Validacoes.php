@@ -6,36 +6,31 @@ abstract class Validacoes {
 
         $ok = true;
         $volta = 1;
-        if(strlen($cpf) == 14){
-            $ok = false;
+        if(strlen($cpf) !== 14){
+            return false;
         }else{
             foreach ($cpf_repartida as $char){
                 switch ($volta) {
                     case 1: case 2: case 3: case 5: case 6: case 7: case 9: case 10: case 11: case 13: case 14:
                         if(!is_numeric($char)){
-                            $ok = false;
-                        }else{
-                            $volta += 1;
+                            return false;
                         }
                         break;
                     case 4: case 8:
-                        if(!$char == "."){
-                            $ok = false;
-                        }else{
-                            $volta += 1;
+                        if($char !== "."){
+                            return false;
                         }
                         break;
 
                     case 12:
-                        if(!$char == "-"){
-                            $ok = false;
-                        }else{
-                            $volta += 1;
+                        if($char !== "-"){
+                            return false;
                         }
                         break;
                     default:
                         break;
                 }
+                $volta += 1;
             }
         }
         return $ok;
@@ -55,7 +50,7 @@ abstract class Validacoes {
 
         $ok = true;
         $volta = 1;
-        if(strlen($celular) == 14){
+        if(strlen($celular) != 14){
             $ok = false;
         }else{
             foreach ($celular_repartida as $char){
@@ -63,34 +58,27 @@ abstract class Validacoes {
                     case 2: case 3: case 5: case 6: case 7: case 8: case 9: case 11: case 12: case 13: case 14:
                         if(!is_numeric($char)){
                             $ok = false;
-                        }else{
-                            $volta += 1;
                         }
                         break;
                     case 1:
-                        if(!$char == "("){
+                        if($char !== "("){
                             $ok = false;
-                        }else{
-                            $volta += 1;
                         }
                         break;
                     case 4:
-                        if(!$char == ")"){
+                        if($char !== ")"){
                             $ok = false;
-                        }else{
-                            $volta += 1;
                         }
                         break;
                     case 10:
-                        if(!$char == "-"){
+                        if($char !== "-"){
                             $ok = false;
-                        }else{
-                            $volta += 1;
                         }
                         break;
                     default:
                         break;
                 }
+                $volta += 1;
             }
         }
         return $ok;
