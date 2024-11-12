@@ -62,5 +62,26 @@ class UsuarioDAO {
         $conn->execute(array(':p_login'=>$obj->login, ':p_email'=>$obj->email, ':p_cpf'=>$obj->cpf, ':p_senha'=>$obj->senha, ':p_id'=>$obj->id_usuario));
         return $conn->rowCount()>0;
     }
+
+    public function deletar_usuario($id) {
+        $query = "DELETE from usuarios where id_usuario = :pid";
+
+        $conn = DB::getConnection()->prepare($query);
+
+        $conn->execute(array(':pid'=>$id));
+        return $conn->rowcount()>0;
+    }
+
+    public function ativar_fk() {
+        $ativar = "SET FOREIGN_KEY_CHECKS=1";
+        $conn = DB::getConnection()->prepare($ativar);
+        $conn->execute();
+    }
+
+    public function desativar_fk() {
+        $desativar = "SET FOREIGN_KEY_CHECKS=0";
+        $conn = DB::getConnection()->prepare($desativar);
+        $conn->execute();
+    }
     
 }

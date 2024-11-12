@@ -67,7 +67,7 @@
                 </article>
                 <article id="articleInput">
                     <div id="divLabel">
-                        <form name="frmAdmHome" action="../controller/pedagogicoBO.php" method="post">
+                        <form name="frmAdmHome" action="../controller/homeBO.php" method="post">
                             <?php
                                 include_once '../model/database/AdmDAO.php';
                                 $dao = new AdmDAO();
@@ -109,9 +109,9 @@
                                 </fieldset>
                             </fieldset>
                             <article id="articleButtonFlex">
-                                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Adm">Alterar Dados</button></p>
-                                    <p class="pCenter" id="btns"><button onclick="javascript:deletar(<?php echo $id_adm ?>)" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Adm">Deletar Conta</button></p>
-                                </article>
+                                    <p class="pCenter" id="btns"><input type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Adm" value="Alterar Dados"/></p>
+                                    <p class="pCenter" id="btns"><input onclick="javascript:deletar(<?php echo $id_adm ?>)" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Adm" value="Deletar Conta"/></p>
+                            </article>
                             <?php
                                     }
                                 ?>

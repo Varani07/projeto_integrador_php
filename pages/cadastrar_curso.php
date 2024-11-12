@@ -10,6 +10,9 @@
         <link rel="stylesheet" type="text/css" href="../css/form.css"/>
         <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
     </head>
+    <?php 
+    $id_usuario = $_GET['id_usuario'];
+    ?>
     <body>
         <main class="corpo">
             <header>
@@ -28,45 +31,45 @@
             <nav id="menu">
                 <ul>
                     <li>
-                        <a href="./area_usuario_home.php">Início</a>
+                        <a href="./area_usuario_home.php?id_usuario=<?php echo $id_usuario; ?>">Início</a>
                     </li>
                 <li>
                     <a>Cadastrar</a>
                     <ul>
                         <li>
-                            <a href="./cadastrar_curso.php">Curso</a>
+                            <a href="./cadastrar_curso.php?id_usuario=<?php echo $id_usuario; ?>">Curso</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_modulo.php">Módulo</a>
+                            <a href="./cadastrar_modulo.php?id_usuario=<?php echo $id_usuario; ?>">Módulo</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_uc.php">Unidade Curricular</a>
+                            <a href="./cadastrar_uc.php?id_usuario=<?php echo $id_usuario; ?>">Unidade Curricular</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_turma.php">Turma</a>
+                            <a href="./cadastrar_turma.php?id_usuario=<?php echo $id_usuario; ?>">Turma</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_aluno.php">Aluno</a>
+                            <a href="./cadastrar_aluno.php?id_usuario=<?php echo $id_usuario; ?>">Aluno</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_professor.php">Professor</a>
+                            <a href="./cadastrar_professor.php?id_usuario=<?php echo $id_usuario; ?>">Professor</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_cronograma.php">Cronograma</a>
+                            <a href="./cadastrar_cronograma.php?id_usuario=<?php echo $id_usuario; ?>">Cronograma</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_professor_uc.php">Professor em UC</a>
+                            <a href="./cadastrar_professor_uc.php?id_usuario=<?php echo $id_usuario; ?>">Professor em UC</a>
                         </li>
                         <li>
-                            <a href="./cadastrar_aluno_turma.php">Aluno em Turma</a>
+                            <a href="./cadastrar_aluno_turma.php?id_usuario=<?php echo $id_usuario; ?>">Aluno em Turma</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./cronogramas.php">Cronogramas</a>
+                    <a href="./cronogramas.php?id_usuario=<?php echo $id_usuario; ?>">Cronogramas</a>
                 </li>
                 <li>
-                    <a href="./ver_alterar.php">Alterar</a>
+                    <a href="./ver_alterar.php?id_usuario=<?php echo $id_usuario; ?>">Alterar</a>
                 </li>
                 <li>
                     <a href="./login.php">Sair</a>
@@ -80,18 +83,21 @@
                 </article>
                 <article id="articleInput">
                     <div id="divLabel">
-                        <form action="#" method="post">
+                        <form action="../controller/acoes_usuarioBO.php" method="post">
                             <fieldset id="fieldsetLabel">
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Nome:</label>
-                                        <input type="text" name="nome_curso" maxlength="40" required />
+                                        <input type="text" name="nome_curso" maxlength="35" required />
+                                        <input type="hidden" name="acao" value="inserir"/>
+                                        <input type="hidden" name="objeto" value="curso"/>
+                                        <input type="hidden" name="id" value="<?php echo $id_usuario; ?>"/>
                                     </div>
                                 </fieldset>
                                 <fieldset id="bloco">
                                     <div class="dados">
                                         <label>Sigla:</label>
-                                        <input type="text" name="sigla" maxlength="6" required />
+                                        <input type="text" name="sigla" maxlength="10" required />
                                     </div>
                                 </fieldset>
                             </fieldset>

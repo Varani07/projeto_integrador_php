@@ -135,8 +135,8 @@
                                     </div>
                                 </fieldset>
                                 <article id="articleButtonFlex">
-                                    <p class="pCenter" id="btns"><button type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Usuarios">Alterar Dados</button></p>
-                                    <p class="pCenter" id="btns"><button onclick="javascript:deletar(<?php echo $id_usuario ?>)" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Usuarios">Deletar Conta</button></p>
+                                    <p class="pCenter" id="btns"><input type="submit" class="botao" id="btnAlterarDados" name="btnAlterar_Dados_Usuarios" value="Alterar Dados"/></p>
+                                    <p class="pCenter" id="btns"><input type="button" onclick="javascript:deletar(<?php echo $id_usuario ?>)" class="botao" id="btnDeletarConta" name="btnDeletar_Dados_Usuarios" value="Deletar Conta"/></p>
                                 </article>
                             </fieldset>
                             <?php } ?>

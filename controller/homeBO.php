@@ -173,7 +173,7 @@ if (isset($_REQUEST['acao']) && isset($_REQUEST['id']) && isset($_REQUEST['tipo'
                     }else{
                         if(isset($_POST['txtusername']) && !empty($_POST['txtusername'])){
                             $adm = new Adm();
-                            $adm->id_usuario = $id;
+                            $adm->id_adm = $id;
                             $adm->user_adm = $_POST['txtusername'];
 
                             $dao = new AdmDAO();
@@ -275,6 +275,55 @@ if (isset($_REQUEST['acao']) && isset($_REQUEST['id']) && isset($_REQUEST['tipo'
             break;
         
         case 'deletar':
+            if ($tipo == 'usuario'){
+                if (isset($_GET['fazer']) && !empty($_GET['fazer'])){
+                    $dao = new UsuarioDAO();
+                    $ativar = new UsuarioDAO();
+                    $desativar = new UsuarioDAO();
+
+                    $desativar->desativar_fk();
+                    if($dao->deletar_usuario($id)){
+                        $ativar->ativar_fk();
+                        ?>
+                        <script type="text/javascript">
+                            alert('Usuário deletado com sucesso.');
+                            history.go(-1);
+                        </script>
+                        <?php
+                    }else{
+                        $ativar->ativar_fk();
+                        ?>
+                        <script type="text/javascript">
+                            alert('Erro ao deletar.');
+                            history.go(-1);
+                        </script>
+                        <?php
+                    }
+                }else{
+                    $dao = new UsuarioDAO();
+                    $ativar = new UsuarioDAO();
+                    $desativar = new UsuarioDAO();
+
+                    $desativar->desativar_fk();
+                    if($dao->deletar_usuario($id)){
+                        $ativar->ativar_fk();
+                        ?>
+                        <script type="text/javascript">
+                            alert('Conta deletada com sucesso.');
+                            <?php header('location: ../pages/login.php'); ?>
+                        </script>
+                        <?php
+                    }else{
+                        $ativar->ativar_fk();
+                        ?>
+                        <script type="text/javascript">
+                            alert('Erro ao deletar conta.');
+                            history.go(-1);
+                        </script>
+                        <?php
+                    }
+                }
+            }
             break;
 
         default:
